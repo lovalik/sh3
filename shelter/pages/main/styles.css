@@ -164,3 +164,75 @@ header a {
     text-align: left;
     color: #4C4C4C;
 }
+/* 
+=============================
+         section pets
+=============================
+ */
+ #pets {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1280px;
+    background: #F6F6F6;
+}
+.background-pets {
+    background: #F6F6F6;
+}
+.pets-content {
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 60px;
+}
+.pets-content > h3 {
+    width: 400px;
+    margin: 0;
+}
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 105px;
+    column-gap: 90px;
+}
+.card {
+    background: #FAFAFA;
+    border-radius: 9px;
+}
+.card:hover {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.card:hover > .button-secondary {
+    background-color: #FDDCC4;
+}
+.pet-nickname{
+    margin: 30px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    color: #545454;
+    letter-spacing: 0.06em;
+}
+.card > button {
+    margin-bottom: 30px;
+}
+.button-arrow {
+    position: absolute;
+    top: calc(50% - 52px/2);
+    width: 52px;
+    height: 52px;
+    font-size: 17px;
+    border: solid 2px #F1CDB3;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.left-arrow {
+    left: 0px;
+}
+.right-arrow {
+    right: 0px;
+}
