@@ -272,3 +272,61 @@ header a {
     margin: 30px 0 0 0;
     color: #545454;
 }
+/* 
+=============================
+         section donation
+=============================
+ */
+ #donation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 1280px;
+    background-color: #F6F6F6;
+}
+.background-donation {
+    background: #F6F6F6;
+}
+.donation__dog-image {
+    object-fit: contain;
+}
+.donation__content {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+.donation__content_text {
+    width: 380px;
+}
+.donation__content_text > h3 {
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+.button-credit-card {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    width: 92%;
+    margin: 0 0 20px 0;
+    padding: 10px 0;
+    background-color: #F1CDB3;
+    border: none;
+    border-radius: 9px;
+}
+.text-like-h4-title {
+    margin: 0;
+    color: #545454;
+}
+.donation__content_text > h5 {
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+.donation__content_text > p{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+    color: #B2B2B2;
+}
