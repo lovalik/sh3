@@ -1,0 +1,122 @@
+@import url('../shared/shared.css');
+
+html,
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.content {
+    box-sizing: border-box;
+    width: 1200px;
+    margin: 80px auto 100px auto;
+    font-size: 0px;
+    text-align: center;
+}
+
+/* 
+===================================
+        section start-screen
+===================================
+ */
+.start-screen {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    width: 1280px;
+    margin: 0 auto;
+    background: url("../../assets/images/noise-lines.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
+.background-start-screen {
+    background: url("../../assets/images/noise-lines.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
+header {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 0px;
+}
+.logo > h1 {
+    margin: 0 0 10px 0;
+    color: #F1CDB3;
+}
+.logo > p {
+    margin: 0;
+    font-family: 'Arial', Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0.15em;
+    color: #FFFFFF;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    column-gap: 35px;
+}
+header a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-decoration: none;
+    color: #CDCDCD;
+}
+.link-about-the-shelter {
+    color: #FAFAFA;
+    border-bottom: solid 3px #F1CDB3; 
+}
+.link-about-the-shelter > p,
+.link-our-pets > p,
+.link-help-the-shelter > p,
+.link-contacts > p {
+    margin: 0;
+}
+.link-our-pets:hover,
+.link-help-the-shelter:hover,
+.link-contacts:hover {
+    color: #FAFAFA;
+    border-bottom: solid 1px #FAFAFA; 
+}
+.start-screen h2 {
+    margin: 0;
+    color: #FFFFFF;
+}
+.start-screen-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 180px auto 0;
+}
+.start-screen_text {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 42px;
+    align-self: center;
+    width: 460px;
+    text-align: left;
+}
+.start-screen_text > p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+    text-align: left;
+    color: #CDCDCD;
+}
+.start-screen-puppy {
+    width: 698px;
+    height: 728px;
+}
