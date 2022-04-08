@@ -120,3 +120,47 @@ header a {
     width: 698px;
     height: 728px;
 }
+/*
+=============================
+        section about
+=============================
+ */
+ #about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 1280px;
+    margin: 0 auto;
+    height: 588px;
+    background-color: #FFFFFF;
+}
+.background-about {
+    background: white;
+}
+.about__content {
+    display: flex;
+    justify-content: center;
+    column-gap: 120px;
+}
+.about__content_text {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 25px;
+    width: 430px;
+}
+.about__content_text > h3 {
+    width: 370px;
+    margin: 0;
+    text-align: left;
+    color: #545454;;
+}
+.about__content_text > p{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+    text-align: left;
+    color: #4C4C4C;
+}
