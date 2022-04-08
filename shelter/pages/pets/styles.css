@@ -85,3 +85,106 @@ header a {
     color: #292929;
     border-bottom: solid 1px #292929; 
 }
+/* 
+=============================
+        section our-pets
+=============================
+ */
+ .our-pets {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 1280px;
+    margin: 0 auto;
+    background: #F6F6F6;
+}
+.background-our-pets {
+    background: #F6F6F6;
+}
+.content-our-pets{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1200px;
+    row-gap: 45px;
+}
+.our-pets h3 {
+    margin: 0;
+    justify-self: center;
+    width: 400px;
+    height: 90px;
+    line-height: 130%;
+}
+.cards-of-pets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    width: 1200px;
+    height: 930px;
+}
+.pet-card {
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    width: 270px;
+    height: 435px;
+    background-color: #FAFAFA;
+    border-radius: 9px;
+}
+.pet-card:hover {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.pet-card:hover > .button-secondary {
+    background-color: #FDDCC4;
+}
+.pet-card__container-for-pet-image {
+    position: relative;
+    width: 270px;
+    height: 270px;
+    border-radius: 9px 9px 0px 0px;
+    overflow: hidden;
+}
+.pet-card > p {
+    margin: 30px 0;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #545454;
+}
+.sophia-dog {
+    position: absolute;
+    top: -30px;
+    left: -80px;
+}
+.block-of-button-paginator {
+    justify-self: center;
+    display: flex;    
+    justify-content: center;
+    column-gap: 20px;
+}
+.block-of-button-paginator h4 {
+    margin: 0;
+}
+.block-of-button-paginator > button:nth-child(1),
+.block-of-button-paginator > button:nth-child(2) {
+    color: #CDCDCD;
+}
+.block-of-button-paginator > button:nth-child(3) {
+    background-color: #F1CDB3;
+    border: none;
+}
+
+.block-of-button-paginator > button:nth-child(4),
+.block-of-button-paginator > button:nth-child(5) {
+    border-color: #F1CDB3;
+}
+.button-paginator > span {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
