@@ -188,3 +188,59 @@ header a {
     font-weight: 400;
     font-style: normal;
 }
+/* 
+=============================
+            footer
+=============================
+ */
+ footer {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    width: 1280px;
+    background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+.background-footer {
+    background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+.footer-content {
+    display: flex;
+    justify-content: center;
+    column-gap: 160px;
+    margin: 40px auto 0;
+}
+#contacts,
+.location {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 16px 0 60px 0;
+    box-sizing: border-box;
+    text-align: left;
+}
+footer h3{
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #FFFFFF;
+}
+footer h4{
+    margin: 0;
+    color: #F1CDB3;
+}
+.email,
+.phone{
+    display: block;
+}
+.email > *,
+.phone > *,
+.place-of-location > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-email,
+.icon-phone,
+.marker-of-location {
+    margin: 0 20px 0 0;
+}
