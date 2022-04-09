@@ -54,12 +54,12 @@ header {
 }
 
 .logo > p {
-    margin: 0;
+    margin: 0 0 0 4px;
     font-family: 'Arial', Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.15;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     color: #FFFFFF;
 }
 
@@ -91,16 +91,21 @@ header a {
     margin: 0;
 }
 
+.link-about-the-shelter:hover {
+    cursor: default;
+}
+
 .link-our-pets:hover,
 .link-help-the-shelter:hover,
 .link-contacts:hover {
     color: #FAFAFA;
-    border-bottom: solid 1px #FAFAFA; 
+    border-bottom: solid 3px #F1CDB3; 
 }
 
 .start-screen h2 {
     margin: 0;
     color: #FFFFFF;
+    letter-spacing: normal;
 }
 
 .start-screen-content {
@@ -137,13 +142,12 @@ header a {
         section about
 =============================
  */
- #about {
+#about {
     position: relative;
     display: flex;
     justify-content: center;
     width: 1280px;
     margin: 0 auto;
-    height: 588px;
 }
 
 .background-about {
@@ -152,6 +156,8 @@ header a {
 
 .about__content {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     column-gap: 120px;
 }
@@ -168,7 +174,7 @@ header a {
     width: 370px;
     margin: 0;
     text-align: left;
-    color: #545454;;
+    color: #545454;
 }
 
 .about__content_text > p{
