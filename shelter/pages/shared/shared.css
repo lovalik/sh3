@@ -1,0 +1,144 @@
+h1 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+h2 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 2.75rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+h3 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+h4,
+.text-like-h4-title {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+}
+
+h5 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+.button {
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.button-primary {
+    box-sizing: border-box;
+    padding: 15px 45px;
+    background: #F1CDB3;
+    border-radius: 100px;
+    border: none;
+}
+
+.button-secondary {
+    box-sizing: border-box;
+    padding: 15px 45px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background-color: transparent;
+}
+
+.button-primary:hover,
+.button-secondary:hover,
+.button-paginator:hover,
+.button-arrow:hover,
+.button-credit-card:hover {
+    background-color: #FDDCC4;
+}
+
+.button-primary:active,
+.button-secondary:active,
+.button-credit-card:active {
+    background: linear-gradient( to top, #FDDCC4, 80%, #FFF3EA );
+}
+
+.button-primary > span,
+.button-secondary > span {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    color: #292929;
+    letter-spacing: 0.06em;
+}
+
+.button-paginator {
+    box-sizing: border-box;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid #CDCDCD;
+    border-radius: 26px;
+    background-color: transparent;
+}
+
+.button-paginator:active,
+.button-arrow:active {
+    background: linear-gradient( to right, #FDDCC4, 80%, #FFE9D8 );
+}
+
+.left-arrow:active,
+.paginator-left:active {
+    background: linear-gradient( to left, #FDDCC4, 50%, #FFE9D8 );
+}
+
+.button-paginator > span {
+    font-size: 17px;
+    color: #292929;
+}
+
+@media screen and ( min-width: 1280px ) {
+    .background {
+        position:absolute;
+        left: calc(-50vw + 50%);
+        width: 100vw;
+        height: 100%;
+        z-index: -1000;
+    }
+}
+@media screen and ( max-width: 1280px ) {
+    .background {
+        position:absolute;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        z-index: -1000;
+    }
+}

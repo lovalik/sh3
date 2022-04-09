@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Arial';
+    src: url( "../../assets/fonts/arial/arialmt.ttf") format('truetype'); 
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url( "../../assets/fonts/georgia/georgia-regular-font.ttf") format('truetype'); 
+    font-style: normal;
+    font-weight: 400;
+}
