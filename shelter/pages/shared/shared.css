@@ -74,7 +74,7 @@ button,
 
 .button-primary:hover,
 .button-secondary:hover,
-.button-paginator:hover,
+.paginator-right:hover,
 .button-arrow:hover,
 .button-credit-card:hover {
     background-color: #FDDCC4;
@@ -109,13 +109,12 @@ button,
     background-color: transparent;
 }
 
-.button-paginator:active,
+.paginator-right:active,
 .button-arrow:active {
     background: linear-gradient( to right, #FDDCC4, 80%, #FFE9D8 );
 }
 
-.left-arrow:active,
-.paginator-left:active {
+.left-arrow:active {
     background: linear-gradient( to left, #FDDCC4, 50%, #FFE9D8 );
 }
 
@@ -137,7 +136,7 @@ button,
     .background {
         position:absolute;
         left: 0;
-        width: 100vw;
+        width: 100%;
         height: 100%;
         z-index: -1000;
     }

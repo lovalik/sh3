@@ -188,6 +188,11 @@ header a {
     column-gap: 20px;
 }
 
+.paginator-left:hover,
+.button-with-page-number:hover {
+    cursor: default;
+}
+
 .block-of-button-paginator h4 {
     margin: 0;
 }
