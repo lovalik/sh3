@@ -144,7 +144,6 @@ header a {
     width: 1280px;
     margin: 0 auto;
     height: 588px;
-    background-color: #FFFFFF;
 }
 
 .background-about {
@@ -192,7 +191,6 @@ header a {
     justify-content: center;
     margin: 0 auto;
     width: 1280px;
-    background: #F6F6F6;
 }
 .background-pets {
     background: #F6F6F6;
@@ -315,7 +313,6 @@ header a {
     justify-content: center;
     margin: 0 auto;
     width: 1280px;
-    background-color: #F6F6F6;
 }
 
 .background-donation {
@@ -381,7 +378,6 @@ header a {
     display: flex;
     margin: 0 auto;
     width: 1280px;
-    background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
 .background-footer {
