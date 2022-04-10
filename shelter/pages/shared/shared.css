@@ -1,9 +1,9 @@
 h1 {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 400;
     font-style: normal;
-    line-height: 130%;
+    line-height: 1.1;
     letter-spacing: 0.06em;
 }
 
@@ -125,19 +125,37 @@ button,
 
 @media screen and ( min-width: 1280px ) {
     .background {
-        position:absolute;
+        position: absolute;
         left: calc(-50vw + 50%);
         width: 100vw;
         height: 100%;
         z-index: -1000;
     }
+    .background-for-sticky-heder {
+        position: fixed;
+        top: 0;
+        left: calc(-50vw + 50%);
+        width: 100vw;
+        height: 120px;
+        z-index: -1000;
+        background-color: #FFFFFF;
+    }
 }
 @media screen and ( max-width: 1280px ) {
     .background {
-        position:absolute;
+        position: absolute;
         left: 0;
         width: 100%;
         height: 100%;
         z-index: -1000;
+    }
+    .background-for-sticky-heder {
+        position: fixed;
+        top: 0;
+        left: calc(-50vw + 50%);
+        width: 100vw;
+        height: 120px;
+        z-index: -1000;
+        background-color: #FFFFFF;
     }
 }
