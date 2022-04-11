@@ -599,7 +599,6 @@ header a {
         margin: var( --mobile-gap-within-sections ) 0 0;
         font-size: var( --mobile-h3-font-size );
         text-align: center;
-        outline: solid 1px red;
     }
 
     .slider {
@@ -649,37 +648,34 @@ header a {
 }
 
 .help__content > h3 {
-    display: inline-block;
-    margin: 0 auto 60px;
     padding: 0;
 }
 
 .list-for-help h4 {
-    /* margin: 30px 0 0 0; */
     color: var( --color-dark-l );
-}
-
-li {
-    outline: solid 1px red;
 }
 
 @media screen and ( min-width: 1280px ) {
     .help__content {
         flex-flow: column;
+        align-items: center;
+        align-self: center;
+        margin: 80px 0 100px;
     }
 
     .help__content > h3 {
         font-size: var( --desktop-h3-font-size );
+        margin: 0 auto 60px;
         text-align: center;
     }
-
+    
     .list-for-help {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         column-gap: 120px;
         row-gap: 55px;
-        margin: 0 auto;
+        margin: 0;
         text-align: center;
     }
 
@@ -687,6 +683,35 @@ li {
         margin: 30px 0 0 0;
     }
     
+}
+
+@media screen and ( min-width: 768px ) and ( max-width: 1280px ) {
+    .help__content {
+        flex-flow: column;
+        align-self: center;
+        margin: 80px 0 100px;
+    }
+
+    .help__content > h3 {
+        font-size: var( --desktop-h3-font-size );
+        margin: 0 auto 60px;
+        text-align: center;
+    }
+    .list-for-help {
+        display: grid;
+        grid-template: repeat( 3, 1fr ) / repeat( 3, 1fr );
+        column-gap: 60px;
+        row-gap: 55px;
+        align-self: center;
+        width: 630px;
+        margin: 0;
+        text-align: center;
+    }
+
+
+    .list-for-help h4 {
+        margin: 30px 0 0 0;
+    }
 }
 
 @media screen and ( min-width: 320px ) and ( max-width: 768px ) {
