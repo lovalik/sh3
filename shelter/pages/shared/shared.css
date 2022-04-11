@@ -3,7 +3,7 @@
     --width-section-768px-1280px: 768px;
     --width-section-320px-768px: 320px;
     --width-sub-section-above-1280px: 1200px;
-    --width-sub-section-768px-1280px: 430px;
+    --width-sub-section-768px-1280px: 708px;
     --width-sub-section-320px-768px: 300px;
 
     --mobile-gap-within-sections: 42px;
@@ -38,7 +38,7 @@ h1 {
 
 h2 {
     font-family: var( --font-family-for-titles );
-    font-size: 2.75rem;
+    font-size: 44px;
     font-weight: 400;
     font-style: normal;
     line-height: 130%;
