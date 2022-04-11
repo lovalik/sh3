@@ -17,6 +17,8 @@
     --color-dark-m: #B2B2B2;
     --color-dark-s: #CDCDCD;
     --color-dark-xl: #4C4C4C;
+    --color-dark-3xl: #292929;
+
 
     --foto-width-320px-768px: 260px;
 
@@ -183,7 +185,7 @@ button,
         background-color: var( --color-light-xl );
     }
 }
-@media screen and ( min-width: 320px ) and ( max-width: 1280px ) {
+@media screen and ( min-width: 320px ) and ( max-width: 1279px ) {
     .background {
         position: absolute;
         left: calc(-50vw + 50%);
@@ -203,7 +205,7 @@ button,
     }
 }
 
-@media screen and ( max-width: 320px ) {
+@media screen and ( max-width: 319px ) {
     .background {
         position: absolute;
         left: 0;
@@ -211,3 +213,4 @@ button,
         height: 100%;
         z-index: -1000;
     }
+}

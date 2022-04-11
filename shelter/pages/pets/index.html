@@ -11,7 +11,7 @@
     <body>
         <header>
             <div class="background background-for-sticky-heder"></div>
-            <div class='header-content'>
+            <div class='header__content'>
                 <a class="logo-link-to-main-page" href="../main/index.html">
                     <div class="logo">
                         <h1>Cozy House</h1>
@@ -32,17 +32,18 @@
                         <p>Contacts</p>
                     </a>
                 </nav>
+                <div class="burger-menu"></div>
             </div>
         </header>
         <main>
             <section class="our-pets">
                 <div class="background background-our-pets"></div>
-                <div class="content content-our-pets">
-                    <h3>Our friends who<br>a looking for a house</h3>
-                    <div class="cards-of-pets-container">
+                <div class="our-pets__content">
+                    <h3>Our friends who<br>are looking for a house</h3>
+                    <div class="cards-of-pets__wrapper">
                         <div class="pet-card">
-                            <div class="pet-card__container-for-pet-image">
-                                <img src="../../assets/images/Katrine-cat.png" alt="Katrine">
+                            <div class="pet-card__image_wrapper">
+                                <img src="../../assets/images/katrine.png" alt="Katrine">
                             </div>
                             <p>Katrine</p>
                             <button class="button-secondary" type="button">
@@ -50,8 +51,8 @@
                             </button>
                         </div>
                         <div class="pet-card">
-                            <div class="pet-card__container-for-pet-image">
-                                <img src="../../assets/images/Jennifer-dog.png" alt="Jennifer">
+                            <div class="pet-card__image_wrapper">
+                                <img src="../../assets/images/jennifer.png" alt="Jennifer">
                             </div>
                             <p>Jennifer</p>
                             <button class="button-secondary" type="button">
@@ -59,8 +60,8 @@
                             </button>
                         </div>
                         <div class="pet-card">
-                            <div class="pet-card__container-for-pet-image">
-                                <img src="../../assets/images/Woody-dog.png" alt="Woody">
+                            <div class="pet-card__image_wrapper">
+                                <img src="../../assets/images/woody.png" alt="Woody">
                             </div>
                             <p>Woody</p>
                             <button class="button-secondary" type="button">
@@ -68,8 +69,8 @@
                             </button>
                         </div>
                         <div class="pet-card">
-                            <div class="pet-card__container-for-pet-image">
-                                <img class="sophia-dog" src="../../assets/images/Sophia-dog.png" alt="Sophia">
+                            <div class="pet-card__image_wrapper">
+                                <img class="sophia-dog" src="../../assets/images/sophia.png" alt="Sophia">
                             </div>
                             <p>Sophia</p>
                             <button class="button-secondary" type="button">
@@ -77,8 +78,8 @@
                             </button>
                         </div>
                         <div class="pet-card">
-                            <div class="pet-card__container-for-pet-image">
-                                <img src="../../assets/images/Timmy-cat.png" alt="Timmy">
+                            <div class="pet-card__image_wrapper">
+                                <img src="../../assets/images/timmy.png" alt="Timmy">
                             </div>
                             <p>Timmy</p>
                             <button class="button-secondary" type="button">
@@ -86,8 +87,8 @@
                             </button>
                         </div>
                         <div class="pet-card">
-                            <div class="pet-card__container-for-pet-image">
-                                <img src="../../assets/images/Charly-dog.png" alt="Charly">
+                            <div class="pet-card__image_wrapper">
+                                <img src="../../assets/images/charly.png" alt="Charly">
                             </div>
                             <p>Charly</p>
                             <button class="button-secondary" type="button">
@@ -95,8 +96,8 @@
                             </button>
                         </div>
                         <div class="pet-card">
-                            <div class="pet-card__container-for-pet-image">
-                                <img src="../../assets/images/Scarlett-dog.png" alt="Scarlett">
+                            <div class="pet-card__image_wrapper">
+                                <img src="../../assets/images/scarlett.png" alt="Scarlett">
                             </div>
                             <p>Scarlett</p>
                             <button class="button-secondary" type="button">
@@ -104,8 +105,8 @@
                             </button>
                         </div>
                         <div class="pet-card">
-                            <div class="pet-card__container-for-pet-image">
-                                <img src="../../assets/images/Freddie-cat.png" alt="Freddie">
+                            <div class="pet-card__image_wrapper">
+                                <img src="../../assets/images/freddie.png" alt="Freddie">
                             </div>
                             <p>Freddie</p>
                             <button class="button-secondary" type="button">
@@ -134,10 +135,10 @@
             </section>
         </main>
         <footer>
-            <div class="background  background-footer"></div>
-            <div class="content footer-content">
+            <div class="background  footer__background"></div>
+            <div class="footer__content">
                 <section id="contacts">
-                    <h3>For questions<br>and suggestions</h3>
+                    <h3>For questions and suggestions</h3>
                     <div>
                         <a class="email" href = "mailto:email@shelter.com">
                             <img class="icon-email" src="../../assets/icons/icon-email.svg" alt="&#9993;">
@@ -152,7 +153,7 @@
                     </div>
                 </section>
                 <section class="location">
-                    <h3>We are waiting<br>for your visit</h3>
+                    <h3>We are waiting for your visit</h3>
                     <a class="place-of-location" href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585558,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263!5m1!1e1?hl=ru-RU">
                         <img class="marker-of-location" src="../../assets/icons/icon-marker.png" alt="&#9971;">
                         <h4>1 Central Street, Boston<br>(entrance from the store)</h4>
@@ -162,9 +163,7 @@
                         <h4>18 South Park, London</h4>
                     </a>
                 </section>
-                <div class="container-for-puppy-image">
-                    <img class="footer-puppy" src="../../assets/images/footer-puppy.png" alt="puppy">
-                </div>
+                <img class="footer__content_image" src="../../assets/images/footer-puppy.png" alt="puppy;">
             </div>
         </footer>
     </body>
