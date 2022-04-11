@@ -1,5 +1,34 @@
+:root {
+    --width-section-above-1280px: 1280px;
+    --width-section-768px-1280px: 768px;
+    --width-section-320px-768px: 320px;
+    --width-sub-section-above-1280px: 1200px;
+    --width-sub-section-768px-1280px: 430px;
+    --width-sub-section-320px-768px: 300px;
+
+    --mobile-gap-within-sections: 42px;
+
+    --color-primary: #F1CDB3;
+    --color-primary-light: #FDDCC4;
+    --color-light-l: #F6F6F6;
+    --color-light-s: #FAFAFA;
+    --color-light-xl: #FFFFFF;
+    --color-dark-l: #545454;
+    --color-dark-m: #B2B2B2;
+    --color-dark-s: #CDCDCD;
+    --color-dark-xl: #4C4C4C;
+
+    --foto-width-320px-768px: 260px;
+
+    --font-family-for-titles: 'Georgia', 'Times New Roman', 'Times', serif;
+    --font-family-for-paragraph: 'Arial', 'Helvetica', sans-serif;
+    --desktop-h3-font-size: 35px;
+    --mobile-h3-font-size: 25px;
+    --font-size-h5: 15px;
+}
+
 h1 {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-family: var( --font-family-for-titles );
     font-size: 32px;
     font-weight: 400;
     font-style: normal;
@@ -8,7 +37,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-family: var( --font-family-for-titles );
     font-size: 2.75rem;
     font-weight: 400;
     font-style: normal;
@@ -17,18 +46,17 @@ h2 {
 }
 
 h3 {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 35px;
+    font-family: var( --font-family-for-titles );
     font-weight: 400;
     font-style: normal;
     line-height: 130%;
     letter-spacing: 0.06em;
-    color: #545454;
+    color: var( --color-dark-l );
 }
 
 h4,
 .text-like-h4-title {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-family: var( --font-family-for-titles );
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
@@ -37,16 +65,28 @@ h4,
 }
 
 h5 {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-family: var( --font-family-for-titles );
+    font-size: var( --font-size-h5 );
     font-weight: 400;
     font-style: normal;
     line-height: 1.1;
     letter-spacing: 0.06em;
-    color: #545454;
+    color: var( --color-dark-l );
+}
+
+p {
+    margin: 0;
+    font-family: var( --font-family-for-paragraph );
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
 }
 
 a {
+    font-family: var( --font-family-for-paragraph );
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
     text-decoration: none;
 }
 
@@ -58,8 +98,9 @@ button,
 
 .button-primary {
     box-sizing: border-box;
-    padding: 15px 45px;
-    background: #F1CDB3;
+    width: 207px;
+    height: 52px;
+    background: var( --color-primary );
     border-radius: 100px;
     border: none;
 }
@@ -67,7 +108,7 @@ button,
 .button-secondary {
     box-sizing: border-box;
     padding: 15px 45px;
-    border: 2px solid #F1CDB3;
+    border: 2px solid var( --color-primary );
     border-radius: 100px;
     background-color: transparent;
 }
@@ -77,19 +118,19 @@ button,
 .paginator-right:hover,
 .button-arrow:hover,
 .button-credit-card:hover {
-    background-color: #FDDCC4;
+    background-color: var( --color-primary-light );
 }
 
 .button-primary:active,
 .button-secondary:active,
 .button-credit-card:active {
-    background: linear-gradient( to top, #FDDCC4, 80%, #FFF3EA );
+    background: linear-gradient( to top, var( --color-primary-light ), 80%, #FFF3EA );
 }
 
 .button-primary > span,
 .button-secondary > span {
     margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var( --font-family-for-titles );
     font-size: 17px;
     font-weight: 400;
     font-style: normal;
@@ -104,7 +145,7 @@ button,
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 2px solid #CDCDCD;
+    border: 2px solid var( --color-dark-s );
     border-radius: 26px;
     background-color: transparent;
 }
@@ -115,7 +156,7 @@ button,
 }
 
 .left-arrow:active {
-    background: linear-gradient( to left, #FDDCC4, 50%, #FFE9D8 );
+    background: linear-gradient( to left, var( --color-primary-light ), 50%, #FFE9D8 );
 }
 
 .button-paginator > span {
@@ -138,14 +179,14 @@ button,
         width: 100vw;
         height: 120px;
         z-index: -1000;
-        background-color: #FFFFFF;
+        background-color: var( --color-light-xl );
     }
 }
 @media screen and ( max-width: 1280px ) {
     .background {
         position: absolute;
-        left: 0;
-        width: 100%;
+        left: calc(-50vw + 50%);
+        width: 100vw;
         height: 100%;
         z-index: -1000;
     }
@@ -156,6 +197,6 @@ button,
         width: 100vw;
         height: 120px;
         z-index: -1000;
-        background-color: #FFFFFF;
+        background-color: var( --color-light-xl );
     }
 }

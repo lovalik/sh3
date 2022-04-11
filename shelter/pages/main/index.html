@@ -10,7 +10,7 @@
     </head>
     <body>
         <section class='start-screen'>
-            <div class="background  background-start-screen"></div>
+            <div class="background  start-screen__background"></div>
             <header>
                 <div class="logo">
                     <h1>Cozy House</h1>
@@ -30,23 +30,24 @@
                         <p>Contacts</p>
                     </a>
                 </nav>
+                <div class="burger-menu"></div>
             </header>
-            <div class='content start-screen-content'>
-                <div class="start-screen_text">
+            <div class='start-screen__content'>
+                <div class="start-screen__content_text">
                     <h2>Not only people<br>need a house</h2>
                     <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
                     <button class="button-primary" type='button' onclick="window.location.href='#pets';">
                         <span>Make a friend</span>
                     </button>
                 </div>
-                <img class="start-screen-puppy" src='../../assets/images/start-screen-puppy.png' alt='puppy'>
+                <img class="start-screen__content_image" src='../../assets/images/start-screen-puppy.png' alt='puppy'>
             </div>
         </section>
         <main>
             <section id='about'>
-                <div class="background  background-about"></div>
-                <div class='content about__content'>
-                    <img class="about__content_image" src="../../assets/images/about-dog-with-cat.png" alt="shelter Cozy House">
+                <div class="background  about__background"></div>
+                <div class='about__content'>
+                    <img class="about__content_image" src="../../assets/images/dog-with-cat.png" alt="shelter Cozy House">
                     <div class="about__content_text">
                         <h3>About the shelter<br>“Cozy House”</h3>
                         <p>Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
@@ -55,37 +56,39 @@
                 </div>
             </section>
             <section id='pets'>
-                <div class="background  background-pets"></div>
-                <div class="content pets-content">
+                <div class="background  pets__background"></div>
+                <div class="pets__content">
                     <h3>Our friends who<br>are looking for a house</h3>
                     <div class="slider">
-                        <button type='button' class="button-arrow left-arrow">
-                            <span>&#8592;</span>
-                        </button>
+                        <div class="buttons-arrow_wrapper">
+                            <button type='button' class="button-arrow left-arrow">
+                                <img src="../../assets/images/arrow.png">
+                            </button>
+                            <button type='button' class="button-arrow right-arrow">
+                                <img src="../../assets/images/arrow.png">
+                            </button>
+                        </div>
                         <div class='card'>
-                            <img src='../../assets/images/Katrine-cat.png' alt='Katrine'>
+                            <img src='../../assets/images/katrine.png' alt='Katrine'>
                             <p class="pet-nickname">Katrine</p>
                             <button class="button-secondary" type="button">
                                 <span>Learn more</span>
                             </button>
                         </div>
                         <div class='card'>
-                            <img src='../../assets/images/Jennifer-dog.png' alt='Jennifer'>
+                            <img src='../../assets/images/jennifer.png' alt='Jennifer'>
                             <p class="pet-nickname">Jennifer</p>
                             <button class="button-secondary" type="button">
                                 <span>Learn more</span>
                             </button>
                         </div>
                         <div class='card'>
-                            <img src='../../assets/images/Woody-dog.png' alt='Woody'>
+                            <img src='../../assets/images/woody.png' alt='Woody'>
                             <p class="pet-nickname">Woody</p>
                             <button class="button-secondary" type="button">
                                 <span>Learn more</span>
                             </button>     
                         </div>
-                        <button type='button' class="button-arrow right-arrow">
-                            <span>&#8594;</span>
-                        </button>
                     </div>
                     <button class="button-primary" type='button' onclick="window.location.href='../pets/index.html';">
                         <span>Get to know the rest</span>
@@ -93,8 +96,8 @@
                 </div>
             </section>
             <section id="help">
-                <div class="background  background-help"></div>
-                <div class="content">
+                <div class="background  help__background"></div>
+                <div class="help__content">
                     <h3>How you can help<br>our shelter</h3>
                     <ul class="list-for-help">
                         <li class="pet-food">
@@ -137,9 +140,9 @@
                 </div>
             </section>
             <section id='donation'>
-                <div class="background  background-donation"></div>
+                <div class="background  donation__background"></div>
                 <div class="donation__content">
-                    <img class="donation__dog-image" src="../../assets/images/donation-puppy.png" alt="dog-image">
+                    <img class="donation__content_image" src="../../assets/images/donation-puppy.png" alt="dog-image">
                     <div class="donation__content_text">
                         <h3>You can also<br>make a donation</h3>
                         <h5>Name of the bank / Type of bank account</h5>
@@ -153,10 +156,10 @@
             </section>
         </main>
         <footer>
-            <div class="background  background-footer"></div>
-            <div class="content footer-content">
+            <div class="background  footer__background"></div>
+            <div class="footer__content">
                 <section id="contacts">
-                    <h3>For questions<br>and suggestions</h3>
+                    <h3>For questions and suggestions</h3>
                     <div>
                         <a class="email" href = "mailto:email@shelter.com">
                             <img class="icon-email" src="../../assets/icons/icon-email.svg" alt="&#9993;">
@@ -171,7 +174,7 @@
                     </div>
                 </section>
                 <section class="location">
-                    <h3>We are waiting<br>for your visit</h3>
+                    <h3>We are waiting for your visit</h3>
                     <a class="place-of-location" href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585558,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263!5m1!1e1?hl=ru-RU">
                         <img class="marker-of-location" src="../../assets/icons/icon-marker.png" alt="&#9971;">
                         <h4>1 Central Street, Boston<br>(entrance from the store)</h4>
@@ -181,9 +184,7 @@
                         <h4>18 South Park, London</h4>
                     </a>
                 </section>
-                <div class="container-for-puppy-image">
-                    <img class="footer-puppy" src="../../assets/images/footer-puppy.png" alt="puppy;">
-                </div>
+                <img class="footer__content_image" src="../../assets/images/footer-puppy.png" alt="puppy;">
             </div>
         </footer>
     </body>
