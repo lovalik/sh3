@@ -7,6 +7,9 @@ body{
     padding: 0;
 }
 
+* {
+    /* outline: solid 1px red;  */
+}
 /* 
 ============================
   common styles responsive
@@ -64,6 +67,10 @@ body{
         display: flex;
         width: var( --width-sub-section-768px-1280px );
     }
+
+    .footer__content {
+        width: var( --width-sub-section-768px-1280px );
+    }
 }
 
 @media screen and ( max-width: 768px ) {
@@ -112,10 +119,6 @@ body{
         section start-screen
 ===================================
  */
-.start-screen, .start-screen * {
-    outline: solid 1px blue;
-}
-
 .start-screen {
     flex-direction: column;
 }
@@ -352,10 +355,6 @@ header a {
         section about
 =============================
  */
-#about, #about * {
-    outline: solid 1px blue;
-}
-
 .about__background {
     background: var( --color-light-xl );
 }
@@ -460,7 +459,7 @@ header a {
 =============================
  */
 #pets, #pets * {
-    outline: solid 1px red;
+    /* outline: solid 1px red; */
 }
 
 .pets__background {
@@ -634,10 +633,6 @@ header a {
          section help
 =============================
  */
-#help, #help * {
-    outline: solid 1px blue;
-}
-
 .help__background {
     background: var( --color-light-xl );
 }
@@ -682,7 +677,6 @@ header a {
     .list-for-help h4 {
         margin: 30px 0 0 0;
     }
-    
 }
 
 @media screen and ( min-width: 768px ) and ( max-width: 1280px ) {
@@ -707,7 +701,6 @@ header a {
         margin: 0;
         text-align: center;
     }
-
 
     .list-for-help h4 {
         margin: 30px 0 0 0;
@@ -751,10 +744,6 @@ header a {
         section donation
 =============================
  */
-#donation, #donation * {
-    outline: solid 1px red;
-}
-
 .donation__background {
     background: var( --color-light-l );
 }
@@ -762,7 +751,6 @@ header a {
 .donation__content_text > h3 {
     margin: 0 0 20px 0;
     width: 300px;
-    text-align: left;
 }
 
 .button-credit-card {
@@ -793,7 +781,6 @@ header a {
 
 @media screen and ( min-width: 1280px ) {
     .donation__content {
-        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         column-gap: 30px;
@@ -802,6 +789,11 @@ header a {
 
     .donation__content_text {
         width: 380px;
+    }
+
+    .donation__content_text > h3 {
+        font-size: var( --desktop-h3-font-size );
+        text-align: left;
     }
 
     .donation__content_text > h5 {
@@ -820,11 +812,41 @@ header a {
 }
 
 @media screen and ( min-width: 768px ) and ( max-width: 1280px ) {
+    .donation__content {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 60px;
+        margin: 80px auto 100px auto;
+    }
 
+    .donation__content_text {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 60px;
+        width: 380px;
+    }
+
+    .donation__content_text > h3 {
+        font-size: var( --desktop-h3-font-size );
+        text-align: left;
+    }
+
+    .donation__content_text > h5 {
+        display: inline-block;
+        margin: 0 0 20px 0;
+        text-align: left;
+    }
+
+    .button-credit-card {
+        width: 350px;
+    }
+
+    .donation__content_image {
+        order: 2;
+    }
 }
 
 @media screen and ( max-width: 768px ) {
-
     .donation__content {
         flex-direction: column;
         align-items: center;
@@ -872,10 +894,6 @@ header a {
             footer
 =============================
  */
-footer, footer * {
-    outline: solid 1px red;
-}
-
 .footer__background {
     background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
@@ -888,23 +906,13 @@ footer, footer * {
 
 #contacts > h3,
 .location > h3 {
-    /* display: block; */
     margin: 0;
-    /* text-align: left; */
     color: var( --color-light-xl );
-}
-
-#contacts > h3 {
-    width: 278px;
 }
 
 footer h4 {
     margin: 0;
     color: var( --color-primary );
-}
-
-.place-of-location > h4 {
-    /* width: 260px; */
 }
 
 .email,
@@ -940,18 +948,56 @@ footer h4 {
         text-align: left;
     }
 
-    .footer__content h3 {
+    #contacts > h3 {
+        width: 280px;
+    }
+
+    #contacts > h3,
+    .location > h3 {
         font-size: var( --desktop-h3-font-size );
     }
 }
 
 @media screen and ( min-width: 768px ) and ( max-width: 1280px) {
     .footer__content {
-        flex-wrap: wrap;
-        margin: 30px auto 0;
+        display: grid;
+        grid-template: 234px auto / 34px 280px 60px 1fr 34px;
+        row-gap: 65px;
+        align-self: center;
+        margin-top: 30px;
     }
 
-    .footer__content h3 {
+    .footer__content_image {
+        grid-row: 2 / 3;
+        grid-column: 2 / -2;
+        justify-self: center;
+    }
+
+    #contacts {
+        grid-column: 2 / 3;
+    }
+
+    .location {
+        grid-column: -2 / -3;
+    }
+
+    #contacts,
+    .location {
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    #contacts > h3 {
+        width: 280px;
+    }
+
+    .location > h3 {
+        width: 270px;
+    }
+
+    #contacts > h3,
+    .location > h3 {
         font-size: var( --desktop-h3-font-size );
     }
 }
