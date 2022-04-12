@@ -107,7 +107,8 @@ header {
     align-items: center;
     height: 120px;
     margin: 0 auto;
-    background: var( --color-light-xl );
+    background: #FFFFFF95;
+    backdrop-filter: blur(4px) saturate(150%)
 }
 
 .header__content {
