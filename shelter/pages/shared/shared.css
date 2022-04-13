@@ -93,6 +93,7 @@ a {
     font-weight: 400;
     line-height: 1.6;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button,
@@ -101,6 +102,7 @@ button,
     font-family: var( --font-family-for-titles );
     cursor: pointer;
     transition: 100ms;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .button-primary {
@@ -169,7 +171,7 @@ button,
     color: var( --color-dark-3xl );
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
 }
@@ -181,4 +183,4 @@ button,
 
 ::-webkit-scrollbar-thumb:horizontal {
     background: #e7e7e7;
-}
+} */
