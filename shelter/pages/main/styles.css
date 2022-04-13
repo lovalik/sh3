@@ -31,12 +31,6 @@ main {
     box-sizing: border-box;
     width: 1280px;
     margin: 0 auto;
-    outline: solid 1px red;
-
-}
-
-.start-screen * {
-    outline: solid 1px red;
 }
 
 .background-start-screen {
