@@ -1,19 +1,30 @@
 @import url('../shared/shared.css');
 
-html,
-body {
+html {
     width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
-main {
-    width: 1280px;
+body {
+    width: 100%;
     margin: 0 auto;
 }
 
-body > * {
+body * {
     outline: solid 1px red; 
+}
+
+.background,
+.background-for-sticky-heder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(255, 0, 179);
+}
+
+.background > * {
+    align-self: stretch;
+    background-color: gold;
 }
 /* 
 ============================
@@ -22,7 +33,7 @@ body > * {
  */
 @media screen and ( min-width: 1280px) {
     header,
-    main,
+    .our-pets,
     footer {
         position: relative;
         display: flex;
@@ -41,56 +52,44 @@ body > * {
 
 @media screen and ( min-width: 768px ) and ( max-width: 1279px) {
     header,
-    main,
+    .our-pets,
     footer {
         position: relative;
         display: flex;
         flex-direction: column;
-        margin: 0 auto;
-        width: var( --width-section-768px-1280px );
+        align-self: stretch;
+        min-width: var( --width-section-768px-1280px );
     }
     
     .header__content,
     .our-pets__content,
     .footer__content {
         display: flex;
-        width: var( --width-sub-section-768px-1280px );
-    }
-
-    .footer__content {
-        width: var( --width-sub-section-768px-1280px );
+        align-self: stretch;
+        min-width: var( --width-sub-section-768px-1280px );
     }
 }
 
 @media screen and ( max-width: 767px ) {
     header,
-    main,
+    .our-pets
     footer {
         position: relative;
         display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        width: var( --width-section-320px-768px );
+        align-items: center;
+        min-width: var( --width-section-320px-768px );
     }
 
     .header__content,
     .our-pets__content,
     .footer__content {
-        align-items: center;
-    }
-
-    .our-pets__content,
-    .footer__content {
         display: flex;
-        flex-direction: column;
-        width: var( --width-sub-section-320px-768px );
+        min-width: var( --width-sub-section-320px-768px );
     }
     
     .start-screen__content_image,
-    .about__content_image,
-    .donation__content_image,
     .footer__content_image {
-        width: var( --foto-width-320px-768px);
+        min-width: var( --foto-width-320px-768px);
     }
 }
 /* 
@@ -98,17 +97,27 @@ body > * {
               header
 ===================================
  */
-header {
+
+.background-for-sticky-heder {
     position: sticky;
     top: 0px;
     z-index: 1000;
+    background: #FFFFFF;
+}
+
+@supports (( -webkit-backdrop-filter: none ) or ( backdrop-filter: none )) {
+    .background-for-sticky-heder {
+        background: #FFFFFF95;
+        backdrop-filter: blur(4px) saturate(150%);
+    }
+}
+
+header {
+    position: relative;
     display: flex;
+    align-self: stretch;
     justify-content: center;
-    align-items: center;
     height: 120px;
-    margin: 0 auto;
-    background: #FFFFFF95;
-    backdrop-filter: blur(4px) saturate(150%)
 }
 
 .header__content {
@@ -178,13 +187,13 @@ header a {
 .link-help-the-shelter:hover,
 .link-contacts:hover {
     color: var( --color-dark-3xl );
-    border-bottom: solid 3px var( --color-primary );
 }
 
 @media screen and ( min-width: 1280px) {
-    .header__content,
-    .our-pets__content {
+    .header__content {
+        align-self: stretch;
         width: var( --width-sub-section-above-1280px );
+        margin: 0 40px;
     }
 
     .burger-menu {
@@ -193,9 +202,11 @@ header a {
 }
 
 @media screen and ( min-width: 768px) and ( max-width: 1279px) {
-    .header__content,
-    .our-pets__content {
-        width: var( --width-sub-section-768px-1280px );
+
+    .header__content {
+        align-self: stretch;
+        min-width: var( --width-sub-section-768px-1280px );
+        margin: 0 30px;
     }
 
     .burger-menu {
@@ -204,9 +215,36 @@ header a {
 }
 
 @media screen and ( max-width: 767px) {
+    header {
+        flex-direction: column;
+    }
+
     .header__content {
-        align-self: flex-start;
-        width: 260px;
+        align-self: stretch;
+        align-items: center;
+        margin: 0 10px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        width: 30px;
+        height: 22px;
+        margin-right: 43px;
+        font-size: 0;
+        border-top: solid 2px #000000;
+        border-bottom: solid 2px #000000;
+    }
+
+    .burger-menu::before {
+        position: absolute;
+        top: calc( 50% - 1px );
+        width: 28px;
+        content: "";
+        border: solid 1px #000000;
+        background-color: #000000;
     }
 }
 /* 
@@ -219,11 +257,10 @@ header a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
 }
 
 .background-our-pets {
-    background: var( --color-light-l );
+    /* background: var( --color-light-l ); */
 }
 
 .our-pets__content > h3 {
@@ -236,7 +273,7 @@ header a {
 }
 
 .pet-card {
-    /* padding-bottom: 30px; */
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,11 +281,16 @@ header a {
     height: 435px;
     background-color: var( --color-light-s );
     border-radius: 9px;
+    overflow: hidden;
 }
 
 .pet-card:hover {
     background-color: var( --color-light-xl );
     cursor: pointer;
+    box-shadow: 3px 3px 3px var( --color-dark-l );
+    transition: 150ms;
+    left: -1px;
+    top: -1px;
 }
 
 .pet-card:hover > .button-secondary {
@@ -275,12 +317,6 @@ header a {
     color: var( --color-dark-l );
 }
 
-.sophia-dog {
-    position: absolute;
-    top: -30px;
-    left: -80px;
-}
-
 .block-of-button-paginator {
     display: flex;    
     justify-content: center;
@@ -295,8 +331,8 @@ header a {
     margin: 0;
 }
 
-.block-of-button-paginator > button:nth-child(1),
-.block-of-button-paginator > button:nth-child(2) {
+.block-of-button-paginator > button:nth-child(1) > span,
+.block-of-button-paginator > button:nth-child(2) > span {
     color: var( --color-dark-s );
 }
 
@@ -316,11 +352,12 @@ header a {
 
 @media screen and ( min-width: 1280px) {
     .our-pets__content {
+        align-self: stretch;
         display: grid;
         grid-template-rows: repeat(3, auto);
         grid-template-columns: 1200px;
         row-gap: 45px;
-        margin: 80px 0 100px;
+        margin: 80px 40px 100px;
     }
 
     .our-pets__content > h3 {
@@ -331,6 +368,8 @@ header a {
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: space-around;
+        row-gap: 30px;
+        column-gap: 40px;
     }
     
     .block-of-button-paginator {
@@ -339,10 +378,14 @@ header a {
 }
 
 @media screen and ( min-width: 768px) and ( max-width: 1279px) {
+    .our-pets {
+        align-items: center;
+    }
+
     .our-pets__content {
         flex-direction: column;
         align-items: center;
-        margin: 80px 0 100px;
+        margin: 80px 30px 100px;
     }
 
     .our-pets__content > h3 {
@@ -351,11 +394,27 @@ header a {
     }
 
     .cards-of-pets__wrapper {
-        flex-wrap: wrap;
-        justify-content: center;
-        column-gap: 40px;
+        align-self: stretch;
+        display: grid;
+        grid-template: repeat( 2, auto ) / repeat( 2, auto );
         row-gap: 30px;
-        padding-top: 30px;
+        margin: 30px 64px 0; 
+    }
+    .pet-card:nth-child(1),
+    .pet-card:nth-child(2),
+    .pet-card:nth-child(3),
+    .pet-card:nth-child(4) {
+        justify-self: center;
+    }
+
+    .pet-card:nth-child(1),
+    .pet-card:nth-child(3) {
+        margin-right: 15px;
+    }
+
+    .pet-card:nth-child(2),
+    .pet-card:nth-child(4) {
+        margin-left: 15px;
     }
 
     .pet-card:nth-child(5),
@@ -369,36 +428,18 @@ header a {
         column-gap: 20px;
         margin-top: 40px;
     }
-
 }
 
 @media screen and ( max-width: 767px) {
+
+    .our-pets__content {
+        flex-direction: column;
+        align-self: stretch;
+        margin: 0 10px;
+    }
+
     .block-of-button-paginator {
         column-gap: 10px;
-    }
-
-    .header-nav {
-        display: none;
-    }
-
-    .burger-menu {
-        position: relative;
-        display: block;
-        align-self: center;
-        width: 30px;
-        height: 22px;
-        font-size: 0;
-        border-top: solid 2px var( --color-primary );
-        border-bottom: solid 2px var( --color-primary );
-    }
-
-    .burger-menu::before {
-        position: absolute;
-        top: calc( 50% - 1px );
-        width: calc( 100% - 2px );
-        content: "";
-        border: solid 1px var( --color-primary );
-        background-color: var( --color-primary );
     }
 
     .our-pets__content > h3 {
@@ -432,7 +473,7 @@ header a {
 =============================
  */
  .footer__background {
-    background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    /* background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20; */
 }
 
 #contacts,
@@ -470,6 +511,14 @@ footer h4 {
     margin: 0 20px 0 0;
 }
 
+#contacts a:hover,
+.location a:hover {
+    position: relative;
+    transition: 150ms;
+    left: -2px;
+    top: -2px;
+}
+
 @media screen and ( min-width: 1280px ) {
 
     .footer__content {
@@ -497,11 +546,11 @@ footer h4 {
 
 @media screen and ( min-width: 768px ) and ( max-width: 1279px) {
     .footer__content {
+        align-self: stretch;
         display: grid;
-        grid-template: 234px auto / 34px 280px 60px 1fr 34px;
+        grid-template: 234px auto / 34px 280px auto 302px 34px;
         row-gap: 65px;
-        align-self: center;
-        margin-top: 30px;
+        margin: 30px 30px 0;
     }
 
     .footer__content_image {
@@ -540,14 +589,21 @@ footer h4 {
 }
 
 @media screen and ( max-width: 767px ) {
+    footer {
+        flex-direction: column;
+    }
+
     .footer__content {
+        flex-direction: column;
+        align-self: stretch;
         align-items: center;
+        margin: 0 10px;
     }
     
     #contacts,
     .location {
+        align-self: center;
        row-gap: 40px;
-       width: 100%;
        align-items: center;
     }
 
@@ -556,6 +612,7 @@ footer h4 {
     }
 
     .location {
+        min-width: 300px;
         margin-top: 40px;
     }
 
@@ -563,6 +620,10 @@ footer h4 {
     .location > h3 {
         font-size: var( --mobile-h3-font-size );
         text-align: center;
+    }
+
+    #contacts > h3 {
+        width: 278px;
     }
 
     .location > h3 {
@@ -574,6 +635,7 @@ footer h4 {
     }
 
     .footer__content_image {
-        margin: 40px 0 0 0;
+        align-self: stretch;
+        margin: 40px 20px 0;
     }
 }

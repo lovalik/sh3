@@ -19,7 +19,6 @@
     --color-dark-xl: #4C4C4C;
     --color-dark-3xl: #292929;
 
-
     --foto-width-320px-768px: 260px;
 
     --font-family-for-titles: 'Georgia', 'Times New Roman', 'Times', serif;
@@ -94,13 +93,13 @@ a {
 
 button,
 .button {
+    font-family: var( --font-family-for-titles );
     cursor: pointer;
     transition: 100ms;
 }
 
 .button-primary {
     box-sizing: border-box;
-    width: 207px;
     height: 52px;
     background: var( --color-primary );
     border-radius: 100px;
@@ -108,8 +107,8 @@ button,
 }
 
 .button-secondary {
-    box-sizing: border-box;
-    padding: 15px 45px;
+    width: 187px;
+    height: 52px;
     border: 2px solid var( --color-primary );
     border-radius: 100px;
     background-color: transparent;
@@ -119,20 +118,19 @@ button,
 .button-secondary:hover,
 .paginator-right:hover,
 .button-arrow:hover,
-.button-credit-card:hover {
+.link-credit-card:hover {
     background-color: var( --color-primary-light );
+    border: none;
 }
 
 .button-primary:active,
-.button-secondary:active,
-.button-credit-card:active {
+.button-secondary:active {
     background: linear-gradient( to top, var( --color-primary-light ), 80%, #FFF3EA );
 }
 
 .button-primary > span,
 .button-secondary > span {
     margin: 0;
-    font-family: var( --font-family-for-titles );
     font-size: 17px;
     font-weight: 400;
     font-style: normal;
@@ -163,54 +161,19 @@ button,
 
 .button-paginator > span {
     font-size: 17px;
-    color: #292929;
+    color: var( --color-dark-3xl );
 }
 
-@media screen and ( min-width: 1280px ) {
-    .background {
-        position: absolute;
-        left: calc(-50vw + 50%);
-        width: 100vw;
-        height: 100%;
-        z-index: -1000;
-    }
-
-    .background-for-sticky-heder {
-        position: fixed;
-        top: 0;
-        left: calc(-50vw + 50%);
-        width: 100vw;
-        height: 120px;
-        z-index: -1000;
-        background-color: var( --color-light-xl );
-    }
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
 }
-@media screen and ( min-width: 320px ) and ( max-width: 1279px ) {
-    .background {
-        position: absolute;
-        left: calc(-50vw + 50%);
-        width: 100vw;
-        height: 100%;
-        z-index: -1000;
-    }
-
-    .background-for-sticky-heder {
-        position: fixed;
-        top: 0;
-        left: calc(-50vw + 50%);
-        width: 100vw;
-        height: 120px;
-        z-index: -1000;
-        background-color: var( --color-light-xl );
-    }
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #646464;
 }
 
-@media screen and ( max-width: 319px ) {
-    .background {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1000;
-    }
+::-webkit-scrollbar-thumb:horizontal {
+    background: #e7e7e7;
 }
