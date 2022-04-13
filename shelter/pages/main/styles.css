@@ -7,7 +7,7 @@ body{
 }
 
 * {
-    outline: solid 1px red; 
+    /* outline: solid 1px red;  */
 }
 
 .background {
@@ -15,13 +15,13 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 0;
-    background-color: rgb(255, 0, 179);
+    /* background-color: rgb(255, 0, 179); */
 
 }
 
 .background > * {
     align-self: stretch;
-    background-color: gold;
+    /* background-color: gold; */
 }
 
 
@@ -129,7 +129,7 @@ body{
 }
 
 .start-screen__background {
-    /* background: url("../../assets/images/noise-lines.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20; */
+    background: var( --start-screen-background-color );
 }
 
 .logo > h1 {
@@ -377,7 +377,7 @@ header a {
 }
 
 .about__background {
-    /* background: var( --color-light-xl ); */
+    background: var( --color-light-xl );
 }
 
 .about__content_text {
@@ -489,7 +489,7 @@ header a {
 }
 
 .pets__background {
-    /* background: var( --color-light-l ); */
+    background: var( --color-light-l );
 }
 
 .slider {
@@ -510,7 +510,7 @@ header a {
 .card:hover {
     background-color: var( --color-light-xl );
     cursor: pointer;
-    box-shadow: 3px 3px 3px var( --color-dark-l );
+    box-shadow: 0 0 5px var( --color-dark-m );
     transition: 150ms;
     left: -1px;
     top: -1px;
@@ -679,10 +679,7 @@ header a {
 =============================
  */
 .help__background {
-    /* background: var( --color-light-xl ); */
-}
-#help {
-    /* padding: 0 69px; */
+    background: var( --color-light-xl );
 }
 
 .list-for-help {
@@ -761,7 +758,6 @@ header a {
         min-width: 630px;
         margin: 0 29px;
         text-align: center;
-        background-color: aqua;
     }
 
     .pet-food {
@@ -837,12 +833,7 @@ header a {
     }
 
     .list-for-help > li {
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between; */
         justify-self: center;
-        /* width: 130px; */
         height: 87px;
         text-align: center;
     }
@@ -857,7 +848,7 @@ header a {
 =============================
  */
 .donation__background {
-    /* background: var( --color-light-l ); */
+    background: var( --color-light-l );
 }
 
 .donation__content_text > h3 {
@@ -1019,7 +1010,7 @@ header a {
 =============================
  */
 .footer__background {
-    /* background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20; */
+    background: var( --footer-background-color );
 }
 
 #contacts,
@@ -1061,8 +1052,8 @@ footer h4 {
 .location a:hover {
     position: relative;
     transition: 150ms;
-    left: -2px;
-    top: -2px;
+    left: -1px;
+    top: -1px;
 }
 
 @media screen and ( min-width: 1280px ) {
