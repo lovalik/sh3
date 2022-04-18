@@ -1,5 +1,5 @@
 @import url('../shared/shared.css');
-/* @import url('../shared/animation.css'); */
+@import url('../shared/animation.css');
 
 html {
     width: 100%;
@@ -520,6 +520,7 @@ header a {
         row-gap: 30px;
         margin: 30px 64px 0; 
     }
+     
     .pet-card:nth-child(1),
     .pet-card:nth-child(2),
     .pet-card:nth-child(3),
@@ -531,7 +532,7 @@ header a {
 
     .pet-card:nth-child(1),
     .pet-card:nth-child(3),
-    .pet-card:nth-child(5) {
+    .pet-card:nth-child(5) { 
         margin-right: 15px;
     }
 
@@ -540,38 +541,6 @@ header a {
     .pet-card:nth-child(6) {
         margin-left: 15px;
     }
-
-    .pet-card:nth-child(7),
-    .pet-card:nth-child(8) {
-        display: none;
-    }
-
-    
-    /* ДЛЯ ТРЕТЬЕЙ ЧАСТИ ЗАДАНИЯ */
-    /* ============================== */
-    /* .pet-card:nth-child(1),
-    .pet-card:nth-child(2),
-    .pet-card:nth-child(3),
-    .pet-card:nth-child(4),
-    .pet-card:nth-child(5),
-    .pet-card:nth-child(6) {
-        justify-self: center;
-    } */
-
-    /* .pet-card:nth-child(1),
-    .pet-card:nth-child(3),
-    .pet-card:nth-child(5) { */
-        /* margin-right: 15px; */
-    /* } */
-
-    /* .pet-card:nth-child(2),
-    .pet-card:nth-child(4),
-    .pet-card:nth-child(6) { */
-        /* margin-left: 15px; */
-    /* } */
-    /* ============================== */
-    /* ДЛЯ ТРЕТЬЕЙ ЧАСТИ ЗАДАНИЯ */
-
 
     .block-of-button-paginator {
         column-gap: 20px;
@@ -603,14 +572,6 @@ header a {
         justify-content: center;
         column-gap: 40px;
         row-gap: 30px;
-    }
-
-    .pet-card:nth-child(4),
-    .pet-card:nth-child(5),
-    .pet-card:nth-child(6),
-    .pet-card:nth-child(7),
-    .pet-card:nth-child(8) {
-        display: none;
     }
 
     .block-of-button-paginator {

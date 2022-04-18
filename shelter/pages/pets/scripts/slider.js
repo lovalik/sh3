@@ -19,8 +19,9 @@ function createSlider( sectionOurPets ) {
     const resizeObserver = new ResizeObserver( ( entries ) => {
         for( let entry of entries ){
             if( entry.contentBoxSize ){
-                currentWidth = entry.contentBoxSize[0].inlineSize;
+                currentWidth = Math.round( entry.contentBoxSize[0].inlineSize );
                 addCardsToSlider( currentWidth );
+                console.log(`slider.js__width-section__${currentWidth}`)
             }
         }
     } );
