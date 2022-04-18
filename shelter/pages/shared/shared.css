@@ -175,6 +175,217 @@ button,
     font-size: 17px;
     color: var( --color-dark-3xl );
 }
+/* 
+=============================
+        popup-menu
+=============================
+ */
+ .popup-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* outline: solid 5px blue; */
+}
+
+@supports (( -webkit-backdrop-filter: none ) or ( backdrop-filter: none )) {
+    .popup-menu {
+        background: #29292995;
+        backdrop-filter: blur( 15px ) saturate( 150% );
+    }
+}
+
+.popup-menu * {
+    /* outline: solid 1px red; */
+}
+
+.popup-menu__content {
+    position: relative;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    background-color: var( --color-light-s );
+    border-radius: 9px;
+}
+
+.popup-menu__content_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.popup-menu__content_text-pet-name,
+.popup-menu__content_text-description {
+    color: var( --color-burger-menu );
+}
+ 
+.popup-menu__image {
+    align-self: stretch;
+    border-radius: 9px 0 0 9px;
+    background-color: black;
+}
+
+.popup-menu__nav > ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 14px;
+    list-style-type: none;
+}
+
+.popup-menu__nav > ul > li {
+    position: relative;
+    font-family: var( --font-family-for-titles );
+    font-size: var( --font-size-h5 );
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    color: var( --color-burger-menu );
+}
+
+.popup-menu__nav > ul > li:before {
+    position: absolute;
+    left: -14px;
+    top: 6px;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var( --color-primary );
+}
+
+.popup-menu__button-close {
+    position: absolute;
+    top: -52px;
+    right: -43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    font-size: 35px;
+    font-style: bold;
+    text-shadow: 0px 0px 7px var( --color-primary );
+    border-radius: 50%;
+    border: solid 2px var( --color-primary );
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25%;
+}
+
+@media screen and ( min-width: 1280px ) {
+
+    .popup-menu__content { 
+        width: 900px;
+        height: 500px;
+    }
+
+    .popup-menu__image {
+        width: 500px;
+        height: 500px;
+    }
+
+    .popup-menu__content_text {
+        margin: 50px 20px auto 29px;
+    }
+
+    .popup-menu__content_text-pet-name {
+        margin: 0 0 10px;
+        font-size: var( --desktop-h3-font-size );
+        color: var( --color-burger-menu );
+    }
+
+    .popup-menu__content_text-type-breed {
+        margin: 0;
+    }
+
+    .popup-menu__content_text-description {
+        margin: 40px 0;
+        font-size: var( --font-size-h5 );
+    }
+
+    .popup-menu__nav > ul {
+        row-gap: 11px;
+    }
+}
+
+@media screen and ( min-width: 768px ) and ( max-width: 1279px ) {
+    .popup-menu__content { 
+        width: 630px;
+        height: 350px;
+    }
+
+    .popup-menu__image {
+        width: 350px;
+        height: 350px;
+    }
+
+    .popup-menu__content_text {
+        margin: 10px 10px auto;
+    }
+
+    .popup-menu__content_text-pet-name {
+        margin: 0 0 10px;
+        font-size: var( --desktop-h3-font-size );
+    }
+
+    .popup-menu__content_text-type-breed {
+        margin: 0;
+    }
+
+    .popup-menu__content_text-description {
+        margin: 20px 0;
+        font-size: 13px;
+    }
+
+    .popup-menu__nav > ul {
+        row-gap: 5px;
+    }
+}
+
+@media screen and ( max-width: 767px ) {
+
+    .popup-menu__content { 
+        width: 240px;
+    }
+
+    .popup-menu__image {
+        display: none;
+    }
+
+    .popup-menu__content_text {
+        margin: 10px;
+    }
+
+    .popup-menu__content_text-pet-name {
+        align-self: center;
+        margin: 0 0 10px;
+        font-size: var( --desktop-h3-font-size );
+    }
+
+    .popup-menu__content_text-type-breed {
+        text-align: center;
+        margin: 0;
+    }
+
+    .popup-menu__content_text-description {
+        margin: 20px 0 24px;
+        font-size: 13px;
+    }
+
+    .popup-menu__nav > ul {
+        row-gap: 6px;
+    }
+}
 /*
 =============================
         scrollbar

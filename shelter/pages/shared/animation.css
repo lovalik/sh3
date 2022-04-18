@@ -1,0 +1,463 @@
+/*
+=======================================
+        shadow area for burger-menu
+=======================================
+*/
+.animation__burger-menu_popup-menu_shadow-area_open {
+    animation-name: shadow-area-open;
+    animation-duration: 430ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shadow-area-open {
+    0% {
+        width: 0;
+        height: 100vh;
+    }  
+    100% {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+ 0% {
+        width: 320px;
+        height: 100vh;
+    }    
+    99% {
+        width: 100%;
+        height: 100vh;
+    }
+    100% {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu {
+     0% {
+        width: 320px;
+        height: 100vh;
+    }    
+    99% {
+        width: 100%;
+        height: 100vh;
+    }
+    100% {
+        width: 100%;
+        height: 100vh;
+    } 
+}
+
+.animation__burger-menu_popup-menu_shadow-area_closed {
+    animation-name: shadow-area-closed;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shadow-area-closed {
+    0% {
+        width: 100%;
+        height: 100vh;
+    }
+    100% {
+        width: 0;
+        height: 100vh;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+            width: 100%;
+            height: 100vh;
+        }
+        100% {
+            width: 0;
+            height: 100vh;
+        }
+    }
+
+@-webkit-keyframes appearance-burger-menu { 
+    0% {
+        width: 100%;
+        height: 100vh;
+    }
+    100% {
+        width: 0;
+        height: 100vh;
+    }
+}
+/*
+=======================================
+        rotation burger-menu
+=======================================
+*/
+.animation__burger-menu-rotation_open {
+    animation-name: rotation-open;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotation-open {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }    
+}
+
+@-moz-keyframes rotation-open {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(90deg);
+    }    
+}
+
+@-webkit-keyframes rotation-open { 
+        0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(90deg);
+    }    
+}
+
+.animation__burger-menu-rotation_closed {
+    animation-name: rotation-closed;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotation-closed {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }    
+}
+
+@-moz-keyframes rotation-closed {
+    0% {
+        transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(0deg);
+    }    
+}
+
+@-webkit-keyframes rotation-closed { 
+        0% {
+        transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(0deg);
+    }    
+}
+/*
+=========================================
+        appearance popup-menu
+=========================================
+*/
+.animation__burger-menu_popup-menu_open {
+    animation-name: popup-menu-open;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popup-menu-open {
+    0% {
+        width: 0;
+ 
+    }
+    100% {
+        width: 320px;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 320px;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu { 
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 320px;
+    }
+}
+
+.animation__burger-menu_popup-menu_closed {
+    animation-name: popup-menu-closed;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popup-menu-closed {
+    0% {
+        width: 320px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+        width: 320px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu { 
+    0% {
+        width: 320px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+/*
+======================================
+        appearance popup-menu nav
+======================================
+*/
+.animation__burger-menu__popup-menu_nav_unhide-text{
+    animation-name: unhide-nav;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes unhide-nav {
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 32px;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 32px;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu { 
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 32px;
+    }
+}
+
+.animation__burger-menu__popup-menu_nav_hide-text{
+    animation-name: hide-nav;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-nav {
+    0% {
+        font-size: 32px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+        font-size: 32px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu { 
+    0% {
+        font-size: 32px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
+/*
+=========================================
+    smooth appearance popup-menu logo
+=========================================
+*/
+.animation__burger-menu__logo_unhide{
+    animation-name: unhide-logo;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes unhide-logo {
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 32px;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 32px;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu { 
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 32px;
+    }
+}
+
+.animation__burger-menu__logo_hide{
+    animation-name: hide-logo;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-logo {
+    0% {
+        font-size: 32px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+        font-size: 32px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu {
+    0% {
+        font-size: 32px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
+.animation__burger-menu__logo-subtitle_unhide{
+    animation-name: unhide-logo-subtitle;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes unhide-logo-subtitle {
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 13px;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 13px;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu { 
+    0% {
+        font-size: 0px;
+    }
+    50% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 13px;
+    }
+}
+
+.animation__burger-menu__logo-subtitle_hide{
+    animation-name: hide-logo-subtitle;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-logo-subtitle {
+    0% {
+        font-size: 13px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
+
+@-moz-keyframes appearance-burger-menu {
+    0% {
+        font-size: 13px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
+
+@-webkit-keyframes appearance-burger-menu { 
+    0% {
+        font-size: 13px;
+    }
+    100% {
+        font-size: 0px;
+    }
+}
