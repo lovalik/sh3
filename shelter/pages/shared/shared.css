@@ -123,7 +123,8 @@ button,
 
 .button-primary:hover,
 .button-secondary:hover,
-.paginator-right:hover,
+.right-arrow:hover,
+.right-double-arrow:hover,
 .button-arrow:hover,
 .link-credit-card:hover {
     background-color: var( --color-primary-light );
@@ -147,6 +148,9 @@ button,
 
 .button-paginator {
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 52px;
     height: 52px;
     margin: 0;
@@ -157,7 +161,8 @@ button,
     background-color: transparent;
 }
 
-.paginator-right:active,
+.right-arrow:active,
+.right-double-arrow:active,
 .button-arrow:active {
     background: linear-gradient( to right, #FDDCC4, 80%, #FFE9D8 );
 }
@@ -170,17 +175,21 @@ button,
     font-size: 17px;
     color: var( --color-dark-3xl );
 }
-
-/* ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
+/*
+=============================
+        scrollbar
+=============================
+*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }
   
 ::-webkit-scrollbar-thumb {
     border-radius: 3px;
-    background: #646464;
+    background: #ababab;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-    background: #e7e7e7;
-} */
+    background: #ababab;
+}

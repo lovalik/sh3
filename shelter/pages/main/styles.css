@@ -1,37 +1,35 @@
 @import url('../shared/shared.css');
 
-html,
 body{
-    width: 100%;
+    margin: 0 auto;
     padding: 0;
 }
 
-* {
-    outline: solid 1px red; 
+body * {
+    /* outline: solid 1px red; */
 }
 
 .background {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
     width: 100%;
-    /* background-color: rgb(255, 0, 179); */
-
 }
 
 .background > * {
     align-self: stretch;
-    /* background-color: gold; */
 }
-
-
 /* 
 ============================
   common styles responsive
 ============================
  */
 @media screen and ( min-width: 1280px) {
+
+    body {
+        min-width: 1280px;
+    }
+
     .start-screen,
     #about,
     #pets,
@@ -58,6 +56,11 @@ body{
 }
 
 @media screen and ( min-width: 768px ) and ( max-width: 1279px) {
+
+    body {
+        min-width: 768px;
+    }
+
     .start-screen,
     #about,
     #pets,
@@ -83,6 +86,11 @@ body{
 }
 
 @media screen and ( max-width: 767px ) {
+
+    body {
+        min-width: 320px;
+    }
+
     .start-screen,
     #about,
     #pets,
@@ -91,6 +99,7 @@ body{
     footer {
         position: relative;
         display: flex;
+        box-sizing: border-box;
         flex-direction: column;
         min-width: var( --width-section-320px-768px );
     }
@@ -150,9 +159,8 @@ body{
 }
 
 nav {
-    flex-wrap: wrap;
-    align-content: center;
-    column-gap: 35px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header a {
@@ -211,6 +219,7 @@ header a {
 
     nav {
         display: flex;
+        width: 443px;
     }
 
     .burger-menu {
@@ -258,6 +267,7 @@ header a {
 
     nav {
         display: flex;
+        width: 443px;
     }
 
     .start-screen__content {
@@ -289,7 +299,7 @@ header a {
     }
 
     .start-screen__content_text > p {
-        text-align: justify;
+        text-align: left;
     }
 
     .start-screen__content_text > .button-primary {
@@ -320,6 +330,10 @@ header a {
         font-size: 0;
         border-top: solid 2px var( --color-primary );
         border-bottom: solid 2px var( --color-primary );
+    }
+
+    .burger-menu:hover {
+        cursor: pointer;
     }
 
     .burger-menu::before {
@@ -411,6 +425,7 @@ header a {
     
     .about__content_text > h3 {
         width: 370px;
+        height: 90px;
         font-size: var( --desktop-h3-font-size );
         text-align: left;
     }
@@ -439,16 +454,20 @@ header a {
     }
 
     .about__content_text > h3 {
+        width: 370px;
+        height: 90px;
         align-self: flex-start;
         font-size: var( --desktop-h3-font-size );
-        width: 370px;
+    }
+
+    .about__content_text > p {
+       text-align: left;
     }
 }
 
 @media screen and ( max-width: 767px ) {
     .about__content {
         flex-direction: column;
-        align-items: space-evenly;
         align-self: stretch;
         row-gap: var( --mobile-gap-within-sections );
         min-width: var( --width-sub-section-320px-768px );
@@ -469,6 +488,10 @@ header a {
         margin: 0 15px;
     }
 
+    .about__content_text > p:nth-child(3){
+        max-height: 239px;
+    }
+
     .about__content_image {
         align-self: stretch;
         order: 2;
@@ -476,6 +499,7 @@ header a {
     }
 
     .about__content_text > h3 {
+        height: 64px;
         text-align: center;
         font-size: var( --mobile-h3-font-size );
     }
@@ -661,7 +685,7 @@ header a {
 
     .buttons-arrow_wrapper {
         display: flex;
-        column-gap: 100px;
+        column-gap: 80px;
         order: 3;
         margin-top: 20px;
     }
@@ -746,9 +770,9 @@ header a {
     }
 
     .help__content > h3 {
-        font-size: var( --desktop-h3-font-size );
         margin: 0 auto 60px;
         text-align: center;
+        font-size: var( --desktop-h3-font-size );
     }
 
     .list-for-help {
@@ -757,7 +781,7 @@ header a {
         row-gap: 55px;
         align-self: stretch;
         min-width: 630px;
-        margin: 0 29px;
+        margin: 0 39px;
         text-align: center;
     }
 
@@ -820,6 +844,7 @@ header a {
     }
 
     .help__content > h3 {
+        height: 64px;
         margin: var( --mobile-gap-within-sections ) 0;
         font-size: var( --mobile-h3-font-size );
         text-align: center;
@@ -835,6 +860,7 @@ header a {
 
     .list-for-help > li {
         justify-self: center;
+        width: 133px;
         height: 87px;
         text-align: center;
     }
@@ -936,6 +962,7 @@ header a {
     }
 
     .donation__content_text > h3 {
+        height: 90px;
         font-size: var( --desktop-h3-font-size );
         text-align: left;
     }
@@ -973,6 +1000,7 @@ header a {
     }
 
     .donation__content_text > h3 {
+        height: 64px;
         margin-top: var( --mobile-gap-within-sections );
         font-size: var( --mobile-h3-font-size );
         text-align: center;
