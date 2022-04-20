@@ -1,10 +1,12 @@
-function createBurgerMenu( header ) {
+function createBurgerMenu( parentElement ) {
 
-    let isLinkAboutTheShelterWasPressed= false;
+    let isLogoWasPressed = false;
+    let isLinkAboutTheShelterWasPressed = false;
     let isLinkOurPetsWasPressed = false;
     let isLinkHelpTheShelterWasPressed = false;
     let isLinkContactsWasPressed = false;
-    let isLogoWasPressed = false;
+
+
 
     const resizeHeader = new ResizeObserver( ( entries ) => {
         for( let entry of entries ){
@@ -14,10 +16,10 @@ function createBurgerMenu( header ) {
         }
     } );
 
-    const burgerMenuPopup = header.querySelector( ".burger-menu__popup" );
-    const burgerMenuWrapper = header.querySelector( ".burger-menu_wrapper" );
-    const burgerMenu = header.querySelector( ".burger-menu" );
-    const burgerMenuHorizontalLine = header.querySelector( ".burger-menu__middle-line" );
+    const burgerMenuPopup = parentElement.querySelector( ".burger-menu__popup" );
+    const burgerMenuWrapper = parentElement.querySelector( ".burger-menu_wrapper" );
+    const burgerMenu = parentElement.querySelector( ".burger-menu" );
+    const burgerMenuHorizontalLine = parentElement.querySelector( ".burger-menu__middle-line" );
 
     const burgerMenuPopupMenu = document.createElement( "div" );
     burgerMenuPopup.prepend( burgerMenuPopupMenu );
@@ -33,7 +35,7 @@ function createBurgerMenu( header ) {
                                         <a class="burger-menu__popup-menu_link-about-shelter" href="##">
                                             <p class="burger-menu__popup-menu_nav_text">About the shelter</p>
                                         </a>
-                                        <a class="burger-menu__popup-menu_link-our-pets" href='##'>
+                                        <a class="burger-menu__popup-menu_link-our-pets" href='../pets/index.html'>
                                             <p class="burger-menu__popup-menu_nav_text">Our pets</p>
                                         </a>
                                         <a class="burger-menu__popup-menu_link-help-the-shelter" href="##">
@@ -44,14 +46,14 @@ function createBurgerMenu( header ) {
                                         </a>
                                     </nav>`
 
-    const burgerMenuPopupNavText = header.querySelectorAll( ".burger-menu__popup-menu_nav_text" );
-    const burgerMenuPopupLogo = header.querySelector(".burger-menu__logo");
-    const burgerMenuPopupLogoSubtitle = header.querySelector(".burger-menu__logo-subtitle");
-    const linkLogo = header.querySelector(".burger-menu__popup-menu_logo");
-    const linkHelpShelter = header.querySelector(".burger-menu__popup-menu_link-help-the-shelter");
-    const linkCurrentPage = header.querySelector(".burger-menu__popup-menu_link-our-pets");
-    const linkAboutTheShelter = header.querySelector(".burger-menu__popup-menu_link-about-shelter");
-    const linkContacts = header.querySelector(".burger-menu__popup-menu_link-contacts");
+    const burgerMenuPopupNavText = parentElement.querySelectorAll( ".burger-menu__popup-menu_nav_text" );
+    const linkLogo = parentElement.querySelector(".burger-menu__popup-menu_logo");
+    const burgerMenuPopupLogo = parentElement.querySelector(".burger-menu__logo");
+    const burgerMenuPopupLogoSubtitle = parentElement.querySelector(".burger-menu__logo-subtitle");
+    const linkContacts = parentElement.querySelector(".burger-menu__popup-menu_link-contacts");
+    const linkHelpShelter = parentElement.querySelector(".burger-menu__popup-menu_link-help-the-shelter");
+    const linkOurPets = parentElement.querySelector(".burger-menu__popup-menu_link-our-pets");
+    const linkAboutTheShelter = parentElement.querySelector(".burger-menu__popup-menu_link-about-shelter");
 
     function hideBurgerMenuWhenResizeViewport( width ) {
         if ( width >= 768 ) {
@@ -59,13 +61,13 @@ function createBurgerMenu( header ) {
             burgerMenuPopup.style.display = "none";
             burgerMenu.classList.remove( "animation__burger-menu-rotation_open" );
             burgerMenu.classList.remove( "animation__burger-menu-rotation_closed" );
-            burgerMenu.style.borderColor = "#000000";
-            burgerMenuHorizontalLine.style.borderColor = "#000000";
-            burgerMenuHorizontalLine.style.backgroundColor = "#000000";
+            burgerMenu.style.borderColor = "#F1CDB3";
+            burgerMenuHorizontalLine.style.borderColor = "#F1CDB3";
+            burgerMenuHorizontalLine.style.backgroundColor = "#F1CDB3";
         }
     }
 
-    resizeHeader.observe( header );
+    resizeHeader.observe( parentElement );
     
     burgerMenuPopup.addEventListener( "mouseover", () => {
         burgerMenuPopup.style.cursor = "pointer";
@@ -133,24 +135,29 @@ function createBurgerMenu( header ) {
 
     burgerMenu.addEventListener( "animationend", () => {
         if ( burgerMenuPopupLogoSubtitle.classList.contains("animation__burger-menu__logo-subtitle_hide") ) {
-            burgerMenu.style.borderColor = "#000000";
-            burgerMenuHorizontalLine.style.borderColor = "#000000";
-            burgerMenuHorizontalLine.style.backgroundColor = "#000000";
+            burgerMenu.style.borderColor = "#F1CDB3";
+            burgerMenuHorizontalLine.style.borderColor = "#F1CDB3";
+            burgerMenuHorizontalLine.style.backgroundColor = "#F1CDB3";
             burgerMenuPopup.style.display = "none";
         }
 
-        if( isLinkAboutTheShelterWasPressed=== true ) {
-            document.location.href = "/pages/main/index.html#about";
-            isLinkAboutTheShelterWasPressed= false;
+        if( isLogoWasPressed === true ) {
+            document.body.scrollIntoView( { block: "start", behavior: "smooth" } );
+            isLogoWasPressed = false;
+        }
+
+        if( isLinkAboutTheShelterWasPressed === true ) {
+            document.querySelector("#about").scrollIntoView( { block: "start", behavior: "smooth" } );
+            isLinkAboutTheShelterWasPressed = false;
         }
 
         if( isLinkOurPetsWasPressed === true ) {
             document.body.scrollIntoView( { block: "start", behavior: "smooth" } );
-            isLinkOurPetsWasPressed = false;
+            isButtonMainPageWasPressed = false;
         }
 
         if( isLinkHelpTheShelterWasPressed === true ) {
-            document.location.href = "/pages/main/index.html#help";
+            document.querySelector("#help").scrollIntoView( { block: "start", behavior: "smooth" } );
             isLinkHelpTheShelterWasPressed = false;
         }
 
@@ -158,24 +165,19 @@ function createBurgerMenu( header ) {
             document.querySelector(".footer__content").scrollIntoView( { block: "start", behavior: "smooth" } );
             isLinkContactsWasPressed = false;
         }
-
-        if( isLogoWasPressed === true ) {
-            document.body.scrollIntoView( { block: "start", behavior: "smooth" } );
-            isLogoWasPressed = false;
-        }
     } );
 
     linkLogo.addEventListener( "click", () => {
         isLogoWasPressed = true;
         hideBurgerPopup();
-    } );
+    } )
 
-    linkAboutTheShelter.addEventListener( "click", () => {
+    linkAboutTheShelter.addEventListener( "click",  () => {
         isLinkAboutTheShelterWasPressed = true;
         hideBurgerPopup();
-    } );
+    } )
 
-    linkCurrentPage.addEventListener( "click",  () => {
+    linkOurPets.addEventListener( "click", () => {
         isLinkOurPetsWasPressed = true;
         hideBurgerPopup();
     } )

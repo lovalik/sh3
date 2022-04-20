@@ -261,7 +261,7 @@ header a {
         display: none;
     }
 
-    .burger-menu_wrapper {
+    /* .burger-menu_wrapper {
         position: relative;
         z-index: 1000000;
         display: flex;
@@ -362,7 +362,7 @@ header a {
 
     .burger-menu__popup-menu_nav > a:hover > p {
         color: var( --color-light-s );
-    }
+    } */
 }
 /* 
 =============================
@@ -390,7 +390,7 @@ header a {
 }
 
 .cards-of-pets__wrapper *{
-    outline: solid 1px red;
+    /* outline: solid 1px red; */
 }
 
 .pet-card {

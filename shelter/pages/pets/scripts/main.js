@@ -19,6 +19,5 @@ function createPageOurPets() {
 
     createBurgerMenu( header );
     createSlider( sectionOurPets );
-
 }
 export default createPageOurPets;
