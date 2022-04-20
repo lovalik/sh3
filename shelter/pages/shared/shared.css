@@ -19,9 +19,6 @@
     --color-dark-xl: #4C4C4C;
     --color-dark-3xl: #292929;
     --color-burger-menu: #000000;
-
-    --start-screen-background-color: url("../../assets/images/noise-lines.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-    --footer-background-color: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
     
     --foto-width-320px-768px: 260px;
 
@@ -208,7 +205,7 @@ button,
     position: relative;
     z-index: 100000;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     align-self: center;
     background-color: var( --color-light-s );

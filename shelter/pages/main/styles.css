@@ -9,16 +9,27 @@ body * {
     outline: solid 1px red;
 }
 
-.background {
+.start-screen__background,
+.about__background,
+.pets__background,
+.help__background,
+.donation__background,
+.footer__background {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.background > * {
+.start-screen__background > *,
+.about__background > *,
+.pets__background > *,
+.help__background > *,
+.donation__background > *,
+.footer__background > * {
     align-self: stretch;
 }
+
 /* 
 ============================
   common styles responsive
@@ -139,7 +150,7 @@ body * {
 }
 
 .start-screen__background {
-    background: var( --start-screen-background-color );
+    background: url("../../assets/images/noise-lines.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .logo > h1 {
@@ -158,7 +169,7 @@ body * {
     color: var( --color-light-xl );
 }
 
-nav {
+header > nav {
     justify-content: space-between;
     align-items: center;
 }
@@ -217,7 +228,7 @@ header a {
         justify-content: space-between;
     }
 
-    nav {
+    header > nav {
         display: flex;
         width: 443px;
     }
@@ -265,7 +276,7 @@ header a {
         display: none;
     }
 
-    nav {
+    header > nav {
         display: flex;
         width: 443px;
     }
@@ -345,7 +356,7 @@ header a {
         background-color: var( --color-primary );
     }
 
-    nav {
+    header > nav {
         display: none;
     }
 
@@ -1032,7 +1043,7 @@ header a {
 =============================
  */
 .footer__background {
-    background: var( --footer-background-color );
+    background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
 #contacts,

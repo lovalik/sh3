@@ -115,7 +115,6 @@ function changePetCardsInSlider( {
             
             buttonLearnMore.removeEventListener( "click", showPetCard );
         }
-        
     }
 
     function showPetCard() {

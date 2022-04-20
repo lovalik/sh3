@@ -15,9 +15,9 @@ function createSectionOurPets( rootElement ) {
     buttonRightArrow.addEventListener( "click", turnThePage );
     buttonLeftArrow.addEventListener( "click", turnThePage );
 
-    function onChangePetCardsInContainer( array ){
+    function onChangePetCardsInContainer(){
         const petCardsCollection = sectionOurPets.querySelectorAll( ".pet-card" );
-        
+
         for( let card of petCardsCollection ){
             card.remove();
         }
@@ -32,7 +32,7 @@ function createSectionOurPets( rootElement ) {
         // console.log(`нажата кнопка______массив до преобразования${JSON.stringify(array)}`)
         methodsArray.changeArrayWhenClickButtonPaginator( array, petCardsCollection.length );
         console.log(`нажата кнопка______массив после преобразования${JSON.stringify(array)}`);
-        onChangePetCardsInContainer( array );
+        onChangePetCardsInContainer();
     }
 
     function onChangeArrayWhileChangeWidthViewport( quantityCards ) {
@@ -48,8 +48,7 @@ function createSectionOurPets( rootElement ) {
                 sectionOurPetsCurrentWidth = Math.round( entry.contentBoxSize[0].inlineSize );
                 console.log(`main.js__width-section__${sectionOurPetsCurrentWidth}`)
                 changePetCards( {
-                    array,
-                    containerForPetCards,
+                    sectionOurPets,
                     sectionOurPetsCurrentWidth,
                     onChangeArrayWhileChangeWidthViewport,
                     onChangePetCardsInContainer
