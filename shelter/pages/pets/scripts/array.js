@@ -113,10 +113,6 @@ function formArray() {
     }
 
     return {
-        totalNumberCards: () => {
-            const splittedArray = createSplittedArray( createArrayOfSixPages() );
-            return splittedArray.length;
-        },
         createArrayOf_6_Pages: () => {
             return createArrayOfSixPages();
         },

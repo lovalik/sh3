@@ -1,15 +1,11 @@
-function dgd() {
+import createSectionOurPets from "./section-our-pets.js";
 
-    const buttonDoubleArrow = document.querySelector( ".double-arrow" );
-    
-    function asd() {
-        alert("111");
-    }
-    
-    buttonDoubleArrow.addEventListener( "click", () => {
-       return alert("dfv");
-    } );
+function createMainPage() {
+
+    const mainPage = document.body;
+
+    createSectionOurPets( mainPage );
+
 }
 
-
-export default dgd;
+export default createMainPage;

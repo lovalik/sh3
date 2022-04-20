@@ -1,6 +1,13 @@
 @import url('../shared/shared.css');
 @import url('../shared/animation.css');
 
+/* .background убрать
+переменная на бэкграунд
+переменную на ширину убрать
+имя бэкграундколор
+*/
+
+
 html {
     width: 100%;
 }
@@ -115,6 +122,7 @@ body * {
     top: 0px;
     z-index: 1000;
     background: #FFFFFF;
+    box-shadow: 0 0 2px var( --color-dark-m );
 }
 
 @supports (( -webkit-backdrop-filter: none ) or ( backdrop-filter: none )) {
@@ -342,6 +350,7 @@ header a {
         display: flex;
         flex-direction: column;
         margin-top: 248px;
+        row-gap: 40px;
         align-self: flex-start;
         align-items: center;
     }
@@ -387,6 +396,10 @@ header a {
     display: flex;
 }
 
+.cards-of-pets__wrapper *{
+    outline: solid 1px red;
+}
+
 .pet-card {
     position: relative;
     display: flex;
@@ -403,10 +416,7 @@ header a {
 .pet-card:hover {
     background-color: var( --color-light-xl );
     cursor: pointer;
-    box-shadow: 0 0 5px var( --color-dark-m );
-    transition: 150ms;
-    left: -1px;
-    top: -1px;
+    box-shadow: 0 0 10px var( --color-dark-m );
 }
 
 .pet-card:hover > .button-secondary {
