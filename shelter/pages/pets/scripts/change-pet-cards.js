@@ -22,7 +22,7 @@ function changePetCardsInSlider( {
     if ( currentWidth >= 1280 && allPetsCards.length === 0 ) {
         addCardsToDOMPage( arrayOfSixPages, 8, 0 );
     } else if ( currentWidth >= 1280 && allPetsCards.length !== 8 ){
-        removeEventListenerFromButtonsLearnMore();
+        removeEventListenerFromPetCards();
         for ( let item of allPetsCards ) {
             item.remove();
         }
@@ -33,7 +33,7 @@ function changePetCardsInSlider( {
         onHighlightRightPaginators();
         addCardsToDOMPage( arrayOfSixPages, 8, 0  );
     } else if ( currentWidth >= 1280 && allPetsCards.length === 8 && buttonSliderClick ) {
-        removeEventListenerFromButtonsLearnMore();
+        removeEventListenerFromPetCards();
         for ( let item of allPetsCards ) {
             item.remove();
         }
@@ -45,7 +45,7 @@ function changePetCardsInSlider( {
     if ( currentWidth >= 768 && currentWidth < 1280 && allPetsCards.length === 0 ) {
         addCardsToDOMPage( arrayOfEightPages, 6, 0  )
     } else if ( currentWidth >= 768 && currentWidth < 1280 && allPetsCards.length !== 6 ){
-        removeEventListenerFromButtonsLearnMore();
+        removeEventListenerFromPetCards();
         for ( let item of allPetsCards ) {
             item.remove();
         }
@@ -56,7 +56,7 @@ function changePetCardsInSlider( {
         onHighlightRightPaginators();
         addCardsToDOMPage( arrayOfEightPages, 6, 0  )
     } else if ( currentWidth >= 768 && currentWidth < 1280 && allPetsCards.length === 6 && buttonSliderClick ) {
-        removeEventListenerFromButtonsLearnMore();
+        removeEventListenerFromPetCards();
         for ( let item of allPetsCards ) {
             item.remove();
         }
@@ -68,7 +68,7 @@ function changePetCardsInSlider( {
     if( currentWidth < 768 && allPetsCards.length === 0 ) {
         addCardsToDOMPage( arrayOfSixteenPages, 3, 0  )
     } else if ( currentWidth < 768 && allPetsCards.length !== 3 ) {
-        removeEventListenerFromButtonsLearnMore();
+        removeEventListenerFromPetCards();
         for ( let item of allPetsCards ) {
             item.remove();
         }
@@ -79,7 +79,7 @@ function changePetCardsInSlider( {
         onHighlightRightPaginators();
         addCardsToDOMPage( arrayOfSixteenPages, 3, 0  )
     } else if( currentWidth < 768 && allPetsCards.length === 3 && buttonSliderClick  ) {
-        removeEventListenerFromButtonsLearnMore();
+        removeEventListenerFromPetCards();
         for ( let item of allPetsCards ) {
             item.remove();
         }
@@ -97,34 +97,30 @@ function changePetCardsInSlider( {
             let card = createPetCard( array[pageNumber][i] );
             petsCardsContainer.append( card );
         }
-        addEventListenerOnButtonsLearnMore();
+        addEventListenerOnPetCards();
     }
 
-    function addEventListenerOnButtonsLearnMore() {
-        const collectionButtonsLearnMore = sectionOurPets.querySelectorAll( ".button-secondary" );
+    function addEventListenerOnPetCards() {
+        const collectionCards = sectionOurPets.querySelectorAll( ".pet-card" );
 
-        for( let buttonLearnMore of collectionButtonsLearnMore ) {
-            buttonLearnMore.addEventListener( "click", showPetCard );
+        for( let card of collectionCards ) {
+            card.addEventListener( "click", showPetCard );
         }
     }
 
-    function removeEventListenerFromButtonsLearnMore() {
-        const collectionButtonsLearnMore = sectionOurPets.querySelectorAll( ".button-secondary" );
-        console.log(`удаление обработчиков событий с кнопок Learn more____${collectionButtonsLearnMore.length}`)
-        for( let buttonLearnMore of collectionButtonsLearnMore ) {
-            
-            buttonLearnMore.removeEventListener( "click", showPetCard );
+    function removeEventListenerFromPetCards() {
+        const collectionCards = sectionOurPets.querySelectorAll( ".pet-card" );
+
+        for( let card of collectionCards ) {
+            card.removeEventListener( "click", showPetCard );
         }
     }
 
     function showPetCard() {
-        let eventTarget = event.target.parentElement.className;
         let petName;
 
-        if( eventTarget === "button-secondary"){
-            petName = event.target.parentElement.previousElementSibling.innerHTML;
-        } else if( eventTarget === "pet-card" ){
-            petName = event.target.previousElementSibling.innerHTML;
+        if( event.currentTarget.className === "pet-card"){
+            petName = event.currentTarget.children[1].innerHTML;
         }
 
         for ( let i = 0; i < petsDataBase.length; i++ ) {

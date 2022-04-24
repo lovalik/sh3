@@ -32,10 +32,8 @@ function createPopupMenu( card ) {
                 let popup = document.querySelector(".popup-menu")
                 
                 if( Boolean( popup ) == true ){
-                    console.log("popup существует на странице__скролл заблокирован")
                     document.body.style.overflow = "hidden";
                 } else if( Boolean( popup ) != true ) {
-                    console.log("popup удален__скролл разблокирован")
                     document.body.style.overflow = "auto";
                 }
             }
