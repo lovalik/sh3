@@ -83,7 +83,8 @@ function createBurgerMenu( parentElement ) {
     burgerMenuWrapper.addEventListener( "click", () => {
 
         if ( burgerMenuPopup.style.display === "none" || Boolean(burgerMenuPopup.style.display) === false ) {
-            
+            console.log( "burger-menu ________ блокируем скролл")
+
             document.body.style.overflow = "hidden";
             
             burgerMenuPopup.style.display = "block";
@@ -114,6 +115,7 @@ function createBurgerMenu( parentElement ) {
 
     function hideBurgerPopup() {
 
+        console.log( "burger-menu ________ разблокируем скролл")
         document.body.style.overflow = "auto";
 
         burgerMenu.classList.remove( "animation__burger-menu-rotation_open" );

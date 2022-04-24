@@ -1,8 +1,6 @@
 function createPopupMenu( card ) {
     const petData = card;
 
-    // <img class="popup-menu__button-close_image" src="../../assets/images/symbol-for-close-button.png" alt="&#215;">
-
     const template = `  <div class="popup-menu__content">
                             <button class="popup-menu__button-close" type="button">&#215;</button>
                             <img class="popup-menu__image" src=${ petData.img } alt=${ petData.name }>
@@ -30,6 +28,16 @@ function createPopupMenu( card ) {
         for( let entry of entries ){
             if( entry.contentBoxSize ){
                 setTop();
+
+                let popup = document.querySelector(".popup-menu")
+                
+                if( Boolean( popup ) == true ){
+                    console.log("popup существует на странице__скролл заблокирован")
+                    document.body.style.overflow = "hidden";
+                } else if( Boolean( popup ) != true ) {
+                    console.log("popup удален__скролл разблокирован")
+                    document.body.style.overflow = "auto";
+                }
             }
         }
     } );
@@ -43,11 +51,10 @@ function createPopupMenu( card ) {
         popup.style.top = `${window.pageYOffset}px`;
     }
 
-    resizeObserver.observe( document.body )
-
     const content = popup.querySelector( ".popup-menu__content")
     const buttonClose = popup.querySelector( ".popup-menu__button-close");
 
+    console.log("popup-menu.js ____блокируем скролл")
     document.body.style.overflow = "hidden";
 
     popup.addEventListener( "click", removePopupFromPage );
@@ -74,6 +81,7 @@ function createPopupMenu( card ) {
         content.removeEventListener( "mouseover", unhighlightButtonClose );
         content.removeEventListener( "click", stopPropagation );
         popup.remove();
+        console.log("popup-menu.js ____разблокируем скролл")
         document.body.style.overflow = "auto";
     }
 

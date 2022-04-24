@@ -24,7 +24,7 @@ function changePetCardsWhenResizeViewport( {
         onChangePetCardsInContainer();
         onAddEventListenerOnButtonsLearnMore()
     } else if ( sectionOurPetsCurrentWidth >= 1280 && petCardsCollection.length === 3 ) {
-        console.log("change-pet-cards.js________________ширина__ >= 1280px")
+        // console.log("change-pet-cards.js________________ширина__ >= 1280px")
         return;
     }
 
@@ -43,7 +43,7 @@ function changePetCardsWhenResizeViewport( {
         onChangePetCardsInContainer();
         onAddEventListenerOnButtonsLearnMore()
     } else if ( sectionOurPetsCurrentWidth >= 768 && sectionOurPetsCurrentWidth < 1280 && petCardsCollection.length === 2 ) {
-        console.log("change-pet-cards.js________________768-1280px")
+        // console.log("change-pet-cards.js________________768-1280px")
         return;
     }
 
@@ -62,7 +62,7 @@ function changePetCardsWhenResizeViewport( {
         onChangePetCardsInContainer();
         onAddEventListenerOnButtonsLearnMore()
     } else if ( sectionOurPetsCurrentWidth < 768 && petCardsCollection.length === 1 ) {
-        console.log("change-pet-cards.js________________ширина < 768px")
+        // console.log("change-pet-cards.js________________ширина < 768px")
         return;
     }
 }

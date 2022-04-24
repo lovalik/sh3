@@ -90,8 +90,8 @@ function changePetCardsInSlider( {
 
     function addCardsToDOMPage( array, cardsOnPages, pageNumber ){
 
-        console.log( `____смена кадра_____${JSON.stringify( array )}`)
-        console.log( `____номер страницы_____${pageNumber}` )
+        console.log( `change-pet-card.js_________текущий массив_____${JSON.stringify( array )}`)
+        console.log( `change-pet-card.js________________________номер страницы_____${pageNumber + 1}` )
     
         for( let i = 0; i < cardsOnPages; i++ ){
             let card = createPetCard( array[pageNumber][i] );

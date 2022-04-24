@@ -16,9 +16,9 @@ function createSlider( sectionOurPets ) {
     const arrayOfSixPages = array.createArrayOf_6_Pages();
     const arrayOfEightPages = array.createArrayOf_8_Pages();
     const arrayOfSixteenPages = array.createArrayOf_16_Pages();
-    console.log( JSON.stringify( arrayOfSixPages ))
-    console.log( JSON.stringify( arrayOfEightPages ))
-    console.log( JSON.stringify( arrayOfSixteenPages ))
+    console.log( `массив для 6 страниц______${JSON.stringify( arrayOfSixPages )}`)
+    console.log( `массив для 8 страниц______${JSON.stringify( arrayOfEightPages )}`)
+    console.log( `массив для 16 страниц______${JSON.stringify( arrayOfSixteenPages )}`)
 
     const resizeObserver = new ResizeObserver( ( entries ) => {
         for( let entry of entries ){
