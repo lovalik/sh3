@@ -173,10 +173,9 @@ header {
     align-content: center;
     column-gap: 35px;
     height: 27px;
-    /* outline: solid 1px red; */
 }
 
-header a {
+.header__content a {
     box-sizing: border-box;
     height: 100%;
     font-family: var( --font-family-for-paragraph );
@@ -260,109 +259,6 @@ header a {
     .header-nav {
         display: none;
     }
-
-    /* .burger-menu_wrapper {
-        position: relative;
-        z-index: 1000000;
-        display: flex;
-        align-items: center;
-        margin-right: 33px;
-    }
-
-    .burger-menu {
-        position: relative;
-        width: 30px;
-        height: 22px;
-        margin: 10px;
-        font-size: 0;
-        border-top: solid 2px var( --color-burger-menu );
-        border-bottom: solid 2px var( --color-burger-menu );
-    }
-
-    .burger-menu:hover {
-        cursor: pointer;
-    }
-
-    .burger-menu__middle-line {
-        position: absolute;
-        top: calc( 50% - 1px );
-        width: 28px;
-        content: "";
-        border-top: solid 2px var( --color-burger-menu );
-        border-right: solid 2px var( --color-burger-menu );
-    }
-
-    .burger-menu:hover {
-        cursor: pointer;
-    }
-
-    .burger-menu__popup {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 10000;
-        display: none;
-        background: #29292960;
-    }
-
-    .burger-menu__popup-menu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 100000;
-        display: flex;
-        justify-content: center;
-        width: 320px;
-        height: 100vh;
-        background-color: var( --color-dark-3xl );
-    }
-
-    .burger-menu__popup-menu_logo {
-        position: absolute;
-        top: 30px;
-        left: 10px;
-        height: 60px;
-    }
-
-    .burger-menu__popup-menu_logo > h1 {
-        margin: 0 0 10px;
-        color: var( --color-primary );
-    }
-
-    .burger-menu__logo-subtitle {
-        margin: 0;
-        padding-left: 4px;
-        font-size: 13px;
-        text-align: right;
-        line-height: 1.1;
-        letter-spacing: 0.1em;
-        color: var( --color-light-xl );
-    }
-
-    .burger-menu__popup-menu_nav {
-        display: flex;
-        flex-direction: column;
-        margin-top: 248px;
-        row-gap: 40px;
-        align-self: flex-start;
-        align-items: center;
-    }
-
-    .burger-menu__popup-menu_nav p {
-        font-size: 32px;
-        text-align: center;
-        color: var( --color-dark-s );
-    }
-
-    .burger-menu__popup-menu_link-our-pets > p {
-        color: var( --color-light-s );
-        border-bottom: solid 3px var( --color-primary );
-    }
-
-
-    .burger-menu__popup-menu_nav > a:hover > p {
-        color: var( --color-light-s );
-    } */
 }
 /* 
 =============================
@@ -591,9 +487,9 @@ header a {
     background: url("../../assets/images/noise-lines.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
-/* footer * {
-    outline: solid 1px red;
-} */
+footer * { 
+    /* outline: solid 1px red; */
+}
 
 #contacts,
 .location {

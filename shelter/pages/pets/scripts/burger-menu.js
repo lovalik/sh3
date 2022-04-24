@@ -139,8 +139,13 @@ function createBurgerMenu( header ) {
             burgerMenuPopup.style.display = "none";
         }
 
+        if( isLogoWasPressed === true ) {
+            document.location.href = "../main/index.html";
+            isLogoWasPressed = false;
+        }
+
         if( isLinkAboutTheShelterWasPressed=== true ) {
-            document.location.href = "/pages/main/index.html#about";
+            document.location.href = "../main/index.html#about";
             isLinkAboutTheShelterWasPressed= false;
         }
 
@@ -150,7 +155,7 @@ function createBurgerMenu( header ) {
         }
 
         if( isLinkHelpTheShelterWasPressed === true ) {
-            document.location.href = "/pages/main/index.html#help";
+            document.location.href = "../main/index.html#help";
             isLinkHelpTheShelterWasPressed = false;
         }
 
@@ -159,10 +164,6 @@ function createBurgerMenu( header ) {
             isLinkContactsWasPressed = false;
         }
 
-        if( isLogoWasPressed === true ) {
-            document.body.scrollIntoView( { block: "start", behavior: "smooth" } );
-            isLogoWasPressed = false;
-        }
     } );
 
     linkLogo.addEventListener( "click", () => {

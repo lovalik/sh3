@@ -68,7 +68,6 @@ body * {
 }
 
 @media screen and ( min-width: 768px ) and ( max-width: 1279px) {
-
     body {
         min-width: 768px;
     }
@@ -98,7 +97,6 @@ body * {
 }
 
 @media screen and ( max-width: 767px ) {
-
     body {
         min-width: 320px;
     }
@@ -221,7 +219,6 @@ header a {
 @media screen and ( min-width: 1280px ) {
     .start-screen {
         align-items: center;
-        /* row-gap: 60px; */
     }
 
     header {
@@ -263,7 +260,6 @@ header a {
 @media screen and ( min-width: 768px ) and ( max-width: 1279px ) {
     .start-screen {
         align-items: center;
-        /* row-gap: 60px; */
     }
     
     header {
@@ -336,12 +332,10 @@ header a {
 
     .burger-menu {
         border-color: var( --color-primary );
-        /* border-bottom: solid 2px var( --color-primary ); */
     }
 
     .burger-menu__middle-line {
         border-color: var( --color-primary );
-        /* border-right: solid 2px var( --color-primary ); */
     }
 
     header > nav {
@@ -716,11 +710,7 @@ header a {
     justify-content: space-between;
 }
 
-.list-for-help > img {
-    align-self: center;
-}
-
-.list-for-help h4 {
+.list-for-help > li > h4 {
     margin: 0;
     color: var( --color-dark-l );
 }
@@ -828,7 +818,6 @@ header a {
 }
 
 @media screen and ( max-width: 767px ) {
-
     .help__content {
         flex-flow: column;
         align-self: stretch;
@@ -857,6 +846,11 @@ header a {
         text-align: center;
     }
 
+    .list-for-help > li > img {
+        width: 50px;
+        height: 50px;
+    }
+    
     .list-for-help > li > h4 {
         font-size: var( --font-size-h5 );
     }

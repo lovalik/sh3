@@ -4,9 +4,7 @@ function createPopupMenu( card ) {
     // <img class="popup-menu__button-close_image" src="../../assets/images/symbol-for-close-button.png" alt="&#215;">
 
     const template = `  <div class="popup-menu__content">
-                            <button class="popup-menu__button-close" type="button">&#215;
-                            
-                            </button>
+                            <button class="popup-menu__button-close" type="button">&#215;</button>
                             <img class="popup-menu__image" src=${ petData.img } alt=${ petData.name }>
                             <div class="popup-menu__content_text">
                                 <h3 class="popup-menu__content_text-pet-name">${ petData.name }</h3>
@@ -52,12 +50,13 @@ function createPopupMenu( card ) {
 
     document.body.style.overflow = "hidden";
 
-    popup.addEventListener( "click", () => {
-        popup.remove();
-        document.body.style.overflow = "auto";
-    } );
-
-    popup.addEventListener( "mouseover", () => {
+    popup.addEventListener( "click", removePopupFromPage );
+    popup.addEventListener( "mouseover", highlightButtonClose );
+    buttonClose.addEventListener( "click", removePopupFromPage );
+    content.addEventListener( "mouseover", unhighlightButtonClose );
+    content.addEventListener( "click", stopPropagation );
+    
+    function highlightButtonClose(){
         if ( event.target.className === "popup-menu" || event.target.className === "popup-menu__button-close" || event.target.className === "popup-menu__button-close_image") {
             buttonClose.style.backgroundColor = "#FDDCC4";
             buttonClose.style.borderColor = "#FDDCC4";
@@ -66,22 +65,27 @@ function createPopupMenu( card ) {
         } else {
             return event.stopPropagation();
         }
-    } );
+    }
 
-    buttonClose.addEventListener( "click", () => {
+    function removePopupFromPage(){
+        popup.removeEventListener( "mouseover", highlightButtonClose );        
+        popup.removeEventListener( "click", removePopupFromPage );
+        buttonClose.removeEventListener( "click", removePopupFromPage );
+        content.removeEventListener( "mouseover", unhighlightButtonClose );
+        content.removeEventListener( "click", stopPropagation );
         popup.remove();
         document.body.style.overflow = "auto";
-    } );
+    }
 
-    content.addEventListener( "mouseover", () => {
+    function unhighlightButtonClose(){
         content.style.cursor = "default";
         buttonClose.style.borderColor = "F1CDB3";
         buttonClose.style.backgroundColor = "transparent";
-    } );
+    }
 
-    content.addEventListener( "click", () => {
-        event.stopPropagation()
-    } );
+    function stopPropagation(){
+        event.stopPropagation();
+    }
 }
 
 export default createPopupMenu;

@@ -48,7 +48,6 @@ function createArray() {
     }
 
     function checkIsMatchForSingleNumber( number, array ){
-
         if( array.length === 0 ){
             return false;
         }

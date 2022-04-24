@@ -10,7 +10,7 @@ function createPetCard( index ) {
                         <button class="button-secondary" type="button">
                             <span>Learn more</span>
                         </button>`
-    console.log(`__________${petsDataBase[index].name}___________`)                    
+    console.log(`pet-card.js__________${petsDataBase[index].name}___________номер в массиве ${index}`)                    
     return card;
 }
 

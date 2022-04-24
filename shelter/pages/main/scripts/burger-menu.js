@@ -6,8 +6,6 @@ function createBurgerMenu( parentElement ) {
     let isLinkHelpTheShelterWasPressed = false;
     let isLinkContactsWasPressed = false;
 
-
-
     const resizeHeader = new ResizeObserver( ( entries ) => {
         for( let entry of entries ){
             if( entry.contentBoxSize ){
@@ -35,7 +33,7 @@ function createBurgerMenu( parentElement ) {
                                         <a class="burger-menu__popup-menu_link-about-shelter" href="##">
                                             <p class="burger-menu__popup-menu_nav_text">About the shelter</p>
                                         </a>
-                                        <a class="burger-menu__popup-menu_link-our-pets" href='../pets/index.html'>
+                                        <a class="burger-menu__popup-menu_link-our-pets" href='##'>
                                             <p class="burger-menu__popup-menu_nav_text">Our pets</p>
                                         </a>
                                         <a class="burger-menu__popup-menu_link-help-the-shelter" href="##">
@@ -85,7 +83,9 @@ function createBurgerMenu( parentElement ) {
     burgerMenuWrapper.addEventListener( "click", () => {
 
         if ( burgerMenuPopup.style.display === "none" || Boolean(burgerMenuPopup.style.display) === false ) {
+            
             document.body.style.overflow = "hidden";
+            
             burgerMenuPopup.style.display = "block";
             burgerMenu.classList.remove( "animation__burger-menu-rotation_closed" );
             burgerMenu.classList.add( "animation__burger-menu-rotation_open" );
@@ -152,7 +152,7 @@ function createBurgerMenu( parentElement ) {
         }
 
         if( isLinkOurPetsWasPressed === true ) {
-            document.body.scrollIntoView( { block: "start", behavior: "smooth" } );
+            document.location.href = "../pets/index.html";
             isButtonMainPageWasPressed = false;
         }
 
