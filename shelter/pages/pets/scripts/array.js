@@ -117,7 +117,7 @@ function formArray() {
             return createArrayOfSixPages();
         },
         createArrayOf_8_Pages: () => {
-            for ( let i = 0; i < 1000; i++ ) {
+            for ( let i = 0; i < 1000000; i++ ) {
                 const splittedArray = createSplittedArray( createArrayOfSixPages() );
                 const array = createArrayOfEightPages( splittedArray );
 
@@ -129,7 +129,7 @@ function formArray() {
             }
         },
         createArrayOf_16_Pages: () => {
-            for ( let i = 0; i < 1000; i++ ) {
+            for ( let i = 0; i < 1000000; i++ ) {
                 const splittedArray = createSplittedArray( createArrayOfSixPages() );
                 const array = createArrayOfSixteenPages( splittedArray );
 

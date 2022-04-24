@@ -89,7 +89,7 @@ function createSectionOurPets( sectionOurPets ) {
             if( entry.contentBoxSize ){
                 console.log(`section-our-pets.js_______текущий массив после изменения ширины экрана__${JSON.stringify(array)}`)
                 sectionOurPetsCurrentWidth = Math.round( entry.contentBoxSize[0].inlineSize );
-                console.log(`section-our-pets.js___________________________________________________текущая ширина экрана${sectionOurPetsCurrentWidth}`)
+                console.log(`section-our-pets.js___________________________________________________текущая ширина экрана__${sectionOurPetsCurrentWidth}px`)
                 changePetCardsWhenResizeViewport ( {
                     sectionOurPets,
                     sectionOurPetsCurrentWidth,
