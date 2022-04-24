@@ -53,7 +53,7 @@ function createSlider( sectionOurPets ) {
     }
 
     onChangePageNumberInButton( currentPage );
-    buttonWithPageNumber.style.fontFamily = 'Arial';
+    // buttonWithPageNumber.style.fontFamily = 'Arial';
 
     resizeObserver.observe( sectionOurPets );
 
